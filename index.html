@@ -1,7 +1,82 @@
-[
+<!DOCTYPE html>
 
-{
+<html>
 
+<head>
+
+	<title>The Ray Harryhausen Creature List </title>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+<nav id="listNavigation">
+<span class="instructions">Sort:</span>
+<a href="#" id="byCreature" class="current" v-on:click="toggleLists"><span class="navBullet"></span>by creature</a>
+<span class="divider"></span>
+<a href="#" id="byMovie" v-on:click="toggleLists"><span class="navBullet"></span>by movie</a>
+<a href="#" id="about">about Ray Harryhausen</a>
+</nav>
+
+
+<section id="creatureList">
+
+<ul class="contentList">
+
+	<li v-for="creature in creatureList" id="{{ creature.id }}">
+
+	<video loop="loop">
+		<source src="{{ creature.video }}">
+	</video>
+
+	<img class="still" src="{{ creature.still }}" alt="" title="" />
+
+	<h2>{{ creature.name }}</h2>
+
+	<h3><a class="creatureList_anchor {{ creature.anchorClass }}">{{ creature.title }}</a> ({{ creature.year }})</h3>
+
+	<p>
+	{{{creature.description}}}
+	</p>
+
+	</li>
+
+</ul>
+
+</section>
+
+
+
+
+
+<section id="movieList">
+
+<ul class="contentList">
+
+	<li v-for="movie in movieList" id="{{movie.id}}">
+	<img class="poster" src="{{movie.poster}}" width="{{movie.posterWidth}}" height="{{movie.posterHeight}}" alt="" title="" />
+	<h2><em>{{movie.title}}</em> ({{movie.year}})</h2>
+		<ul class="movieList_cast">
+		<li v-for="movieCreature in movie.creatures">
+			<a class="movieList_anchor {{movie.anchorClass}}">{{movieCreature}}</a>
+		</li>
+		</ul>
+	</li>
+
+</ul>
+
+</section>
+
+
+	<script>
+
+
+
+	var harryhausenModel = {
 
     "creatureList": [
         {
@@ -879,8 +954,37 @@
             "anchorClass" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"],
             "creatures" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"]
         }
-
     ]
 
-}
-]
+	};
+
+
+
+	var creatureViewModel = new Vue({
+		el: '#creatureList .contentList',
+		data: harryhausenModel
+	});
+
+
+	var movieViewModel = new Vue({
+		el: '#movieList .contentList',
+		data: harryhausenModel
+	});
+
+	var navViewModel = new Vue ({
+		el: "#listNavigation",
+		data: harryhausenModel,
+		methods: {
+			toggleLists: function() {
+				console.log("++++ "+ this);
+			}
+		}
+	})
+
+
+	</script>
+
+</body>
+
+
+</html>
