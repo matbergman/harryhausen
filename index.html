@@ -16,12 +16,15 @@
 
 <nav id="listNavigation">
 <span class="instructions">Sort:</span>
-<a href="#" id="byCreature" class="current" v-on:click="toggleLists"><span class="navBullet"></span>by creature</a>
+<a href="#" id="byCreature" class="current" v-on:click="toggleCreature"><span class="navBullet"></span>by creature</a>
 <span class="divider"></span>
-<a href="#" id="byMovie" v-on:click="toggleLists"><span class="navBullet"></span>by movie</a>
+<a href="#" id="byMovie" v-on:click="toggleMovie"><span class="navBullet"></span>by movie</a>
 <a href="#" id="about">about Ray Harryhausen</a>
 </nav>
 
+
+<div v-if="listStateCreature">listStateCreature</div>
+<div v-if="listStateMovie">listStateMovie</div>
 
 <section id="creatureList">
 
@@ -971,12 +974,25 @@
 		data: harryhausenModel
 	});
 
+ 
 	var navViewModel = new Vue ({
 		el: "#listNavigation",
-		data: harryhausenModel,
+		data: {
+			listStateCreature: true,
+			listStateMovie: false
+		},
 		methods: {
-			toggleLists: function() {
-				console.log("++++ "+ this);
+			toggleCreature: function() {
+				this.listStateCreature = true;
+				this.listStateMovie = false;
+				console.log("++++ listStateCreature: "+ this.listStateCreature);
+				console.log("++++ listStateMovie: "+ this.listStateMovie);
+			},
+			toggleMovie: function() {
+				this.listStateCreature = false;
+				this.listStateMovie = true;
+				console.log("++++ listStateCreature: "+ this.listStateCreature);
+				console.log("++++ listStateMovie: "+ this.listStateMovie);
 			}
 		}
 	})
