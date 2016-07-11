@@ -11,32 +11,32 @@
 
 </head>
 
-<body>
-
+<body v-cloak>
 
 <nav id="listNavigation">
 <span class="instructions">Sort:</span>
-<a href="#" id="byCreature" class="current" v-on:click="toggleCreature"><span class="navBullet"></span>by creature</a>
+<a href="#" id="byCreature" v-bind:class="{ 'current': layout == 'layoutCreature'}" v-on:click="layout='layoutCreature'"><span class="navBullet"></span>by creature</a>
 <span class="divider"></span>
-<a href="#" id="byMovie" v-on:click="toggleMovie"><span class="navBullet"></span>by movie</a>
-<a href="#" id="about">about Ray Harryhausen</a>
+<a href="#" id="byMovie" v-bind:class="{ 'current': layout == 'layoutMovie'}" v-on:click="layout='layoutMovie'"><span class="navBullet"></span>by movie</a>
+<a href="#" id="about" v-bind:class="{ 'current': layout == 'layoutAbout'}" v-on:click="layout='layoutAbout'"><span class="navBullet">about Ray Harryhausen</span></a>
 </nav>
 
 
-<div v-if="listStateCreature">listStateCreature</div>
-<div v-if="listStateMovie">listStateMovie</div>
-
-<section id="creatureList">
+<section id="creatureList" v-if="layout == 'layoutCreature'">
 
 <ul class="contentList">
 
 	<li v-for="creature in creatureList" id="{{ creature.id }}">
 
+<!--
 	<video loop="loop">
 		<source src="{{ creature.video }}">
 	</video>
 
 	<img class="still" src="{{ creature.still }}" alt="" title="" />
+
+-->
+
 
 	<h2>{{ creature.name }}</h2>
 
@@ -54,14 +54,14 @@
 
 
 
-
-
-<section id="movieList">
+<section id="movieList" v-if="layout == 'layoutMovie'">
 
 <ul class="contentList">
 
 	<li v-for="movie in movieList" id="{{movie.id}}">
-	<img class="poster" src="{{movie.poster}}" width="{{movie.posterWidth}}" height="{{movie.posterHeight}}" alt="" title="" />
+
+<!--	<img class="poster" src="{{movie.poster}}" width="{{movie.posterWidth}}" height="{{movie.posterHeight}}" alt="" title="" /> -->
+
 	<h2><em>{{movie.title}}</em> ({{movie.year}})</h2>
 		<ul class="movieList_cast">
 		<li v-for="movieCreature in movie.creatures">
@@ -73,6 +73,15 @@
 </ul>
 
 </section>
+
+
+<section id="about" v-if="layout == 'layoutAbout'">
+
+About
+
+
+</section>
+
 
 
 	<script>
@@ -975,25 +984,11 @@
 	});
 
  
+
 	var navViewModel = new Vue ({
-		el: "#listNavigation",
+		el: "body",
 		data: {
-			listStateCreature: true,
-			listStateMovie: false
-		},
-		methods: {
-			toggleCreature: function() {
-				this.listStateCreature = true;
-				this.listStateMovie = false;
-				console.log("++++ listStateCreature: "+ this.listStateCreature);
-				console.log("++++ listStateMovie: "+ this.listStateMovie);
-			},
-			toggleMovie: function() {
-				this.listStateCreature = false;
-				this.listStateMovie = true;
-				console.log("++++ listStateCreature: "+ this.listStateCreature);
-				console.log("++++ listStateMovie: "+ this.listStateMovie);
-			}
+			layout: 'layoutCreature',
 		}
 	})
 
