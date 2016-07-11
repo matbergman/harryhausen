@@ -77,8 +77,14 @@
 
 <section id="about" v-if="layout == 'layoutAbout'">
 
-About
+<div class="content">
 
+
+<a class="portrait" href="{{portraitLink}}" target="_blank" title="{{portraitTitle}}"></a>
+{{{aboutContent}}}
+
+
+</div>
 
 </section>
 
@@ -97,6 +103,10 @@ var movieViewModel = new Vue({
 	data: harryhausenModel
 });
 
+var aboutViewModel = new Vue({
+    el: '#about .content',
+    data: harryhausenModel
+});
 
 
 var navViewModel = new Vue ({

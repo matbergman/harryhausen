@@ -1,881 +1,889 @@
-    var harryhausenModel = {
+var aboutContent = "<p>Groundbreaking visual effects artist <a href=\"http://www.rayharryhausen.com\" target=\"_blank\" title=\"Ray Harryhausen Official Site (opens in a new window)\">Ray Harryhausen</a> refined and elevated stop-motion animation to an art. His <strong>Dynamation</strong> technique of matting animated creatures into live-action settings revolutionized the use of stop-motion visual effects in feature films.</p>";
+aboutContent += "<p>Ray Harryhausen's creations aren't the most realistic in the realm of special effects, but Ray's touch is instantly recognizable. His creations are absolutely alive; in each frame his creatures move, twitch, breathe, <strong>act</strong> with personality and pathos. Few other low-budget monster movies of the time match the technical competence and respect for the subject as Mr. Harryhausen's films.</p>";
+aboutContent += "<p>The Ray Harryhausen Creature list emphasizes Ray's work in feature films. Not included are his early <a href=\"http://www.archive.org/details/mother_goose_little_miss_muffet\" rel=\"tag\" target=\"_blank\">Mother Goose shorts</a>; test reels and unrealized projects; some stop-motion effects shots (like the discus toss in <em>Jason and the Argonauts</em>); live-action effects (like the Iguana stand-in dinosaur from <em>One Million Years B.C.</em>); miniatures (including the <em>Mysterious Island</em> balloon); makeup &amp; prosthetics, and animated replacements for humans caught in creatures' clutches. Ray Harryhausen deserves further credit for his groundbreaking work in composite effects, demonstrated to great effect in <em>The 3 Worlds of Gulliver</em>.</p>";    
 
-    "creatureList": [
-        {
-            "id" : "MightyJoeYoung",
-            "still" : "http://www.harryhausen.com/images/stills/h_00.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_00.mp4",
-            "name" : "Mighty Joe Young",
-            "anchorClass" : "MightyJoeYoung_Movie",
-            "title" : "Mighty Joe Young",
-            "year" : "1949",
-            "description" : "Joe, the title character, is a tamed gorilla brought to Hollywood. Ray Harryhausen assisted his mentor Willis O'Brien (<em>King Kong</em>) on <em>Mighty Joe Young</em> and animated most of Mighty Joe Young's performance."
+var harryhausenModel = {
 
-        },
-        {
-            "id" : "Rhedosaur",
-            "still" : "http://www.harryhausen.com/images/stills/h_01.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_01.mp4",            
-            "name" : "Rhedosaur",
-            "anchorClass" : "TheBeastFrom20000Fathoms",            
-            "title" : "The Beast from 20,000 Fathoms",
-            "year" : "1953",
-            "description" : "A fictitious species of dinosaur, awakened from a 100,000 year hibernation in the Arctic Circle by an atom bomb test."
-        },
-        {
-            "id" : "ItGiantOctopus",
-            "still" : "http://www.harryhausen.com/images/stills/h_02.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_02.mp4",            
-            "name" : "It (giant octopus)",
-            "anchorClass" : "ItCameFromBeneathTheSea",            
-            "title" : "It Came from Beneath the Sea",
-            "year" : "1955",
-            "description" : "A 200 foot long, radioactive, mutated Octopus that wreaks havoc on San Francisco."
-        },
-        {
-            "id" : "BrontosaurTheAnimalWorld",
-            "still" : "http://www.harryhausen.com/images/stills/h_03.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_03.mp4",            
-            "name" : "Brontosaur (The Animal World)",
-            "anchorClass" : "TheAnimalWorld",            
-            "title" : "The Animal World",
-            "year" : "1956",
-            "description" : "'Engineered by nature in a freakish manner so that she can hardly support her weight in land,' as described in <em>The Animal World</em>."
-        },
-        {
-            "id" : "AllosaurTheAnimalWorld",
-            "still" : "http://www.harryhausen.com/images/stills/h_04.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_04.mp4",            
-            "name" : "Allosaur (The Animal World)",
-            "anchorClass" : "TheAnimalWorld",            
-            "title" : "The Animal World",
-            "year" : "1956",
-            "description" : "'Mortal enemy of the Bronty,' as described in <em>The Animal World</em>."
-        },
-        {
-            "id" : "BrontosaurHatchling",
-            "still" : "http://www.harryhausen.com/images/stills/h_05.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_05.mp4",            
-            "name" : "Brontosaur Hatchling",
-            "anchorClass" : "TheAnimalWorld",            
-            "title" : "The Animal World",
-            "year" : "1956",
-            "description" : "'The prehistoric sun incubates one of the few remaining Bronty eggs.'"
-        },
-        {
-            "id" : "Stegosaur",
-            "still" : "http://www.harryhausen.com/images/stills/h_06.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_06.mp4",
-            "name" : "Stegosaur",
-            "anchorClass" : "TheAnimalWorld",            
-            "title" : "The Animal World",
-            "year" : "1956",
-            "description" : "'A dinosaur of gentle nature, even though 20 feet long and 10 tons weight.'"
-        },
-        {
-            "id" : "Sceraptosaur",
-            "still" : "http://www.harryhausen.com/images/stills/h_07.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_07.mp4",            
-            "name" : "Sceraptosaur",
-            "anchorClass" : "TheAnimalWorld",            
-            "title" : "The Animal World",
-            "year" : "1956",
-            "description" : "This sceraptosaur battles with both a stegosaur and another sceraptosaur."
-        },
-        {
-            "id" : "TriceratopsTheAnimalWorld",
-            "still" : "http://www.harryhausen.com/images/stills/h_08.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_08.mp4",            
-            "name" : "Triceratops (The Animal World)",
-            "anchorClass" : "TheAnimalWorld",            
-            "title" : "The Animal World",
-            "year" : "1956",
-            "description" : "'One of the species fated to disappear from the face of the Earth,' as narrated by <em>The Animal World</em>."
-        },
-        {
-            "id" : "Tyrannosaur",
-            "still" : "http://www.harryhausen.com/images/stills/h_09.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_09.mp4",            
-            "name" : "Tyrannosaur",
-            "anchorClass" : "TheAnimalWorld",            
-            "title" : "The Animal World",
-            "year" : "1956",
-            "description" : "'Deadly enemy of the Triceratops,' as narrated by <em>The Animal World</em>."
-        },
-        {
-            "id" : "FlyingSaucers",
-            "still" : "http://www.harryhausen.com/images/stills/h_10.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_10.mp4",            
-            "name" : "Flying Saucers",
-            "anchorClass" : "EarthVsTheFlyingSaucers",            
-            "title" : "Earth vs. the Flying Saucers",
-            "year" : "1956",
-            "description" : "Saucers soar, land, battle, and smash buildings into stop-motion animated rubble."
-        },
-        {
-            "id" : "Spaceship",
-            "still" : "http://www.harryhausen.com/images/stills/h_11.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_11.mp4",            
-            "name" : "Spaceship",
-            "anchorClass" : "TwentyMillionMilesToEarth",            
-            "title" : "Twenty Million Miles to Earth",
-            "year" : "1957",
-            "description" : "The crash-landing of the first Venus expedition on its return trip."
-        },
-        {
-            "id" : "Ymir",
-            "still" : "http://www.harryhausen.com/images/stills/h_13.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_13.mp4",            
-            "name" : "Ymir",
-            "anchorClass" : "TwentyMillionMilesToEarth",            
-            "title" : "Twenty Million Miles to Earth",
-            "year" : "1957",
-            "description" : "Never named in the film, the Ymir is a native of Venus. Returned to Earth as an egg, the Ymir rapidly grows to monstrous proportions in Earth's atmosphere and runs amok."
-        },
-        {
-            "id" : "ElephantTwentyMillionMilesToEarth",
-            "still" : "http://www.harryhausen.com/images/stills/h_12.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_12.mp4",            
-            "name" : "Elephant (Twenty Million Miles to Earth)",
-            "anchorClass" : "TwentyMillionMilesToEarth",            
-            "title" : "Twenty Million Miles to Earth",
-            "year" : "1957",
-            "description" : "The Ymir tangles with this elephant on the streets of Rome after escaping from captivity at the zoo."
-        },
-        {
-            "id" : "Cyclops",
-            "still" : "http://www.harryhausen.com/images/stills/h_14.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_14.mp4",            
-            "name" : "Cyclops",
-            "anchorClass" : "The7thVoyageOfSinbad",            
-            "title" : "The 7th Voyage of Sinbad",
-            "year" : "1958",
-            "description" : "Mr. Harryhausen imagined the mythical cyclops as a goat-legged, horned, wild creature. Two cyclopses appear in the film: The first is defeated by Sinbad, and the second is killed by the fire-breathing dragon that guards Zokora's cave."
-        },
-        {
-            "id" : "SerpentWoman",
-            "still" : "http://www.harryhausen.com/images/stills/h_15.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_15.mp4",            
-            "name" : "Serpent Woman",
-            "anchorClass" : "The7thVoyageOfSinbad",            
-            "title" : "The 7th Voyage of Sinbad",
-            "year" : "1958",
-            "description" : "Princess Parissa's waiting woman Sadi, transformed into a dancing serpent woman by Zokora's magic."
-        },
-        {
-            "id" : "RocHatchling",
-            "still" : "http://www.harryhausen.com/images/stills/h_16.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_16.mp4",            
-            "name" : "Roc Hatchling",
-            "anchorClass" : "The7thVoyageOfSinbad",            
-            "title" : "The 7th Voyage of Sinbad",
-            "year" : "1958",
-            "description" : "Princess Parissa's waiting woman Sadi, transformed into a dancing serpent woman by Zokora's magic."
-        },
-        {
-            "id" : "Roc",
-            "still" : "http://www.harryhausen.com/images/stills/h_17.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_17.mp4",            
-            "name" : "Roc",
-            "anchorClass" : "The7thVoyageOfSinbad",            
-            "title" : "The 7th Voyage of Sinbad",
-            "year" : "1958",
-            "description" : "Payback for the slaugter of her Roc hatchling."
-        },
-        {
-            "id" : "Skeleton",
-            "still" : "http://www.harryhausen.com/images/stills/h_18.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_18.mp4",            
-            "name" : "Skeleton",
-            "anchorClass" : "The7thVoyageOfSinbad",            
-            "title" : "The 7th Voyage of Sinbad",
-            "year" : "1958",
-            "description" : "Brought to life by Zokora's magic to steal a magic lamp, this skeleton swordsman fights Sinbad in Zokora's cave."
-        },
-        {
-            "id" : "Dragon",
-            "still" : "http://www.harryhausen.com/images/stills/h_19.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_19.mp4",            
-            "name" : "Dragon",
-            "anchorClass" : "The7thVoyageOfSinbad",            
-            "title" : "The 7th Voyage of Sinbad",
-            "year" : "1958",
-            "description" : "Guards the cavern entrance to Zokora's liar, slays a cyclops, and attacks Sinbad's crew before being slain by giant crossbow."
-        },
-        {
-            "id" : "Squirrel",
-            "still" : "http://www.harryhausen.com/images/stills/h_20.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_20.mp4",            
-            "name" : "Squirrel",
-            "anchorClass" : "The3WorldsOfGulliver",            
-            "title" : "The 3 Worlds of Gulliver",
-            "year" : "1960",
-            "description" : "Lost in Brodbdingnag, a land of giants, the newlywed Gullivers are menaced by a giant squirrel."
-        },
-        {
-            "id" : "Crocodile",
-            "still" : "http://www.harryhausen.com/images/stills/h_21.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_21.mp4",            
-            "name" : "Crocodile",
-            "anchorClass" : "The3WorldsOfGulliver",            
-            "title" : "The 3 Worlds of Gulliver",
-            "year" : "1960",
-            "description" : "The king of Brobdingnag forces Gulliver to battle his 'miniature' crocodile in a fight to the death."
-        },
-        {
-            "id" : "Crab",
-            "still" : "http://www.harryhausen.com/images/stills/h_22.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_22.mp4",            
-            "name" : "Crab",
-            "anchorClass" : "MysteriousIsland",            
-            "title" : "Mysterious Island",
-            "year" : "1961",
-            "description" : "Attacks the castaways on Mysterious Island. After the battle, the castaways cook the defeated crab in a convenient hot spring."
-        },
-        {
-            "id" : "Phororhacos",
-            "still" : "http://www.harryhausen.com/images/stills/h_23.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_23.mp4",            
-            "name" : "Phororhacos",
-            "anchorClass" : "MysteriousIsland",            
-            "title" : "Mysterious Island",
-            "year" : "1961",
-            "description" : "A giant, scrawny, prehistoric bird that threatens to trample the castaways of Mysterious Island."
-        },
-        {
-            "id" : "Cephalopod",
-            "still" : "http://www.harryhausen.com/images/stills/h_24.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_24.mp4",            
-            "name" : "Cephalopod",
-            "anchorClass" : "MysteriousIsland",            
-            "title" : "Mysterious Island",
-            "year" : "1961",
-            "description" : "The nautiloid cephalopod is a gigantic prehistoric mollusc. The cephalopod attacks Captian Nemo's diving crew as they attempt to raise a sunken pirate ship."
-        },
-        {
-            "id" : "Bee",
-            "still" : "http://www.harryhausen.com/images/stills/h_25.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_25.mp4",            
-            "name" : "Bee",
-            "anchorClass" : "MysteriousIsland",            
-            "title" : "Mysterious Island",
-            "year" : "1961",
-            "description" : "This bee drives two members of the Mysterious Island party into its giant honeycomb and seals them in with beeswax."
-        },
-        {
-            "id" : "Talos",
-            "still" : "http://www.harryhausen.com/images/stills/h_26.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_26.mp4",            
-            "name" : "Talos",
-            "anchorClass" : "JasonAndTheArgonauts",            
-            "title" : "Jason and the Argonauts",
-            "year" : "1963",
-            "description" : "Massive statue on the Isle of Bronze who guards over a treasure chamber of the gods. Talos comes to life when Hercules steals from its treasure."
-        },
-        {
-            "id" : "Harpies",
-            "still" : "http://www.harryhausen.com/images/stills/h_27.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_27.mp4",            
-            "name" : "Harpies",
-            "anchorClass" : "JasonAndTheArgonauts",            
-            "title" : "Jason and the Argonauts",
-            "year" : "1963",
-            "description" : "Two harpies are assigned by Zeus to torment the blind prophet Phinneas for abusing his power of prophecy. Phinneas agrees to help Jason in exchange for the harpies' capture."
-        },
-        {
-            "id" : "Hydra",
-            "still" : "http://www.harryhausen.com/images/stills/h_28.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_28.mp4",            
-            "name" : "Hydra",
-            "anchorClass" : "JasonAndTheArgonauts",            
-            "title" : "Jason and the Argonauts",
-            "year" : "1963",
-            "description" : "Jason slays the mythical Hydra to steal the Golden Fleece. The Hydra comes from a different myth (the twelve labors of Hercules), and appears in Jason and the Argonauts short two heads (the Greek myth had nine)."
-        },
-        {
-            "id" : "Skeletons",
-            "still" : "http://www.harryhausen.com/images/stills/h_29.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_29.mp4",            
-            "name" : "Skeletons",
-            "anchorClass" : "JasonAndTheArgonauts",            
-            "title" : "Jason and the Argonauts",
-            "year" : "1963",
-            "description" : "Seven 'Children of the Hydra's Teeth' fight with Jason and two of his crew. Four are defeated in swordfights, and three plunge to their deaths following Jason off a cliff into the sea."
-        },
-        {
-            "id" : "Moonship",
-            "still" : "http://www.harryhausen.com/images/stills/h_30.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_30.mp4",            
-            "name" : "Moonship",
-            "anchorClass" : "FirstMenInTheMoon",            
-            "title" : "First Men in the Moon",
-            "year" : "1964",
-            "description" : "A hypothetical United Nations moonship service module lands on the moon's surface."
-        },        
-        {
-            "id" : "SpaceSphere",
-            "still" : "http://www.harryhausen.com/images/stills/h_31.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_31.mp4",            
-            "name" : "Space Sphere",
-            "anchorClass" : "FirstMenInTheMoon",            
-            "title" : "First Men in the Moon",
-            "year" : "1964",
-            "description" : "A Victorian era spacecraft, patterned after a diving bell and covered with railroad bumpers, powered by Professor Cavor's anti-gravity paint."
-        },    
-        {
-            "id" : "MoonCow",
-            "still" : "http://www.harryhausen.com/images/stills/h_32.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_32.mp4",            
-            "name" : "Moon Cow",
-            "anchorClass" : "FirstMenInTheMoon",            
-            "title" : "First Men in the Moon",
-            "year" : "1964",
-            "description" : "Both a moon cow and moon bull appear (both are the same stop-motion puppet), each a gigantic centipede-like beast with fierce mandibles and bad tempters."
-        },    
-        {
-            "id" : "KateCalendarsSkeleton",
-            "still" : "http://www.harryhausen.com/images/stills/h_33.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_33.mp4",            
-            "name" : "Kate Calendar's Skeleton",
-            "anchorClass" : "FirstMenInTheMoon",            
-            "title" : "First Men in the Moon",
-            "year" : "1964",
-            "description" : "Kate Calendar is observed in an X-ray observation chamber by the Selenites."
-        },
-        {
-            "id" : "Selenite",
-            "still" : "http://www.harryhausen.com/images/stills/h_34.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_34.mp4",            
-            "name" : "Selenite",
-            "anchorClass" : "FirstMenInTheMoon",            
-            "title" : "First Men in the Moon",
-            "year" : "1964",
-            "description" : "Insect-like inhabitants of the interior of the moon (most appearances of the Selenites were costumed actors)."
-        },    
-        {
-            "id" : "GrandLunar",
-            "still" : "http://www.harryhausen.com/images/stills/h_35.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_35.mp4",            
-            "name" : "Grand Lunar",
-            "anchorClass" : "FirstMenInTheMoon",            
-            "title" : "First Men in the Moon",
-            "year" : "1964",
-            "description" : "The leader of the Selenites, encased in a crystal sphere. The Grand Lunar is sentient, and interrogates Professor Cavor."
-        },
-        {
-            "id" : "BrontosaurOneMillionYearsBC",
-            "still" : "http://www.harryhausen.com/images/stills/h_36.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_36.mp4",            
-            "name" : "Brontosaur (One Million Years B.C.)",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "This Brontosaur makes a brief appearance as Tumak wanders the wasteland after being expelled from his tribe."
-        },
-        {
-            "id" : "Archelon",
-            "still" : "http://www.harryhausen.com/images/stills/h_37.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_37.mp4",            
-            "name" : "Archelon",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "A giant prehistoric turtle menaces the Shell people, who drive it into the sea."
-        },
-        {
-            "id" : "AllosaurOneMillionYearsBC",
-            "still" : "http://www.harryhausen.com/images/stills/h_38.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_38.mp4",            
-            "name" : "Allosaur (One Million Years B.C.)",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "Attacks the peaceful fishing village of the Shell people, but is impaled and killed by Tumak in a ferocious battle."
-        },
-        {
-            "id" : "TriceratopsOneMillionYearsBC",
-            "still" : "http://www.harryhausen.com/images/stills/h_39.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_39.mp4",            
-            "name" : "Triceratops (One Million Years B.C.)",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "Gives chase to Tumak and Loana when they strike out on their own."
-        },
-        {
-            "id" : "Ceratosaur",
-            "still" : "http://www.harryhausen.com/images/stills/h_40.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_40.mp4",            
-            "name" : "Ceratosaur",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "Attacks a Triceratops during Tumak and Lona's journey. In the chaos, Tumak and Lona are separated."
-        },
-        {
-            "id" : "Pterodactyl",
-            "still" : "http://www.harryhausen.com/images/stills/h_41.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_41.mp4",            
-            "name" : "Pterodactyl",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "A Pterodactyl that suddenly drops from the sky and flies off with Lona in its talons."
-        },
-        {
-            "id" : "Rhamphorhynchus",
-            "still" : "http://www.harryhausen.com/images/stills/h_42.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_42.mp4",            
-            "name" : "Rhamphorhynchus",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "A flying reptile that attacks and kills the Pterodactyl to steal Lona."
-        },
-        {
-            "id" : "PterodactylHatchlings",
-            "still" : "http://www.harryhausen.com/images/stills/h_43.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_43.mp4",            
-            "name" : "Pterodactyl Hatchlings",
-            "anchorClass" : "OneMillionYearsBC",            
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "description" : "The mother Pterodactyl attempts to feed Lona to her ravenous offspring before being attacked by a Rhamphorhynchus."
-        },
-        {
-            "id" : "Horse",
-            "still" : "http://www.harryhausen.com/images/stills/h_44.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_44.mp4",            
-            "name" : "Horse",
-            "anchorClass" : "TheValleyOfGwangi",            
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "description" : "A brief animation of T.J. performing a stunt on her horse: Diving from a tower into a water tub."
-        },
-        {
-            "id" : "Eohippus",
-            "still" : "http://www.harryhausen.com/images/stills/h_45.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_45.mp4",            
-            "name" : "Eohippus",
-            "anchorClass" : "TheValleyOfGwangi",            
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "description" : "Named 'El Diablo' by its captors, Eohippus is a miniature prehistoric horse. Its escape leads to the discovery of Gwangi."
-        },
-        {
-            "id" : "Pteranodon",
-            "still" : "http://www.harryhausen.com/images/stills/h_46.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_46.mp4",            
-            "name" : "Pteranodon",
-            "anchorClass" : "TheValleyOfGwangi",            
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "description" : "Attacks Lope when he, Professor Bromley, and the cowboys first enter the forbidden valley."
-        },
-        {
-            "id" : "Ornithomimus",
-            "still" : "http://www.harryhausen.com/images/stills/h_47.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_47.mp4",            
-            "name" : "Ornithomimus",
-            "anchorClass" : "TheValleyOfGwangi",            
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "description" : "A small dinosaur chased by cowboys while searching for El Diablo in the Forbidden Valley before being captured & consumed by Gwangi."
-        },
-        {
-            "id" : "Gwangi",
-            "still" : "http://www.harryhausen.com/images/stills/h_48.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_48.mp4",            
-            "name" : "Gwangi",
-            "anchorClass" : "TheValleyOfGwangi",            
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "description" : "The title character of <em>Gwangi</em> is an Allosaur from the Forbidden Valley, an isolated spot where prehistoric life still flourishes. Gwangi is captured by a travelling Wild West show, but escapes and wreaks havoc."
-        },
-        {
-            "id" : "Styrathosaur",
-            "still" : "http://www.harryhausen.com/images/stills/h_49.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_49.mp4",            
-            "name" : "Styrathosaur",
-            "anchorClass" : "TheValleyOfGwangi",            
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "description" : "Attacks Gwangi while Professor Brombely watches, and later interferes during the lasso-ing of Gwangi."
-        },
-        {
-            "id" : "ElephantTheValleyOfGwangi",
-            "still" : "http://www.harryhausen.com/images/stills/h_50.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_50.mp4",            
-            "name" : "Elephant (The Valley of Gwangi)",
-            "anchorClass" : "TheValleyOfGwangi",            
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "description" : "This performing elephant panicks and is slain by Gwangi after escaping from its cage."
-        },
-        {
-            "id" : "Homonicus",
-            "still" : "http://www.harryhausen.com/images/stills/h_51.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_51.mp4",            
-            "name" : "Homonicus",
-            "anchorClass" : "TheGoldenVoyageOfSinbad",            
-            "title" : "The Golden Voyage of Sinbad",
-            "year" : "1974",
-            "description" : "A small humanoid, bat-winged creature who serves as an extension of Prince Koura's eyes and ears. The Homonicus is spontaneously generated from blood and sorcery."
-        },
-        {
-            "id" : "Figurehead",
-            "still" : "http://www.harryhausen.com/images/stills/h_52.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_52.mp4",            
-            "name" : "Figurehead",
-            "anchorClass" : "TheGoldenVoyageOfSinbad",            
-            "title" : "The Golden Voyage of Sinbad",
-            "year" : "1974",
-            "description" : "The figurehead of Sinbad's ship, brought to life by Prince Koura's magic to steal Sinbad's navigation charts."
-        },
-        {
-            "id" : "Kali",
-            "still" : "http://www.harryhausen.com/images/stills/h_53.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_53.mp4",            
-            "name" : "Kali",
-            "anchorClass" : "TheGoldenVoyageOfSinbad",            
-            "title" : "The Golden Voyage of Sinbad",
-            "year" : "1974",
-            "description" : "Six-armed statue of the god worshiped by the Lemurians. The statue comes to life with a potion from Prince Koura, and fights Sinbad's entire crew with a sword in each hand."
-        },
-        {
-            "id" : "Centaur",
-            "still" : "http://www.harryhausen.com/images/stills/h_54.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_54.mp4",            
-            "name" : "Centaur",
-            "anchorClass" : "TheGoldenVoyageOfSinbad",            
-            "title" : "The Golden Voyage of Sinbad",
-            "year" : "1974",
-            "description" : "'God of the Single Eye,' who resides in a pit leading to the Fountain of Destiny. The centaur represents the powers of evil, and is defeated by Sinbad with the aid of the Griffin in the film's climax."
-        },
-        {
-            "id" : "Griffin",
-            "still" : "http://www.harryhausen.com/images/stills/h_55.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_55.mp4",            
-            "name" : "Griffin",
-            "anchorClass" : "TheGoldenVoyageOfSinbad",            
-            "title" : "The Golden Voyage of Sinbad",
-            "year" : "1974",
-            "description" : "Representing the powers of good, the Griffin battles the Centaur to defend Sinbad."
-        },
-        {
-            "id" : "Ghouls",
-            "still" : "http://www.harryhausen.com/images/stills/h_56.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_56.mp4",            
-            "name" : "Ghouls",
-            "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "description" : "Three torch-wielding ghouls are summoned by Queen Zenobia to kill Sinbad and his crew. They are defeated by Sinbad's quick-thinking action when he crushes them under a pile of timbers."
-        },
-        {
-            "id" : "Baboon",
-            "still" : "http://www.harryhausen.com/images/stills/h_57.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_57.mp4",            
-            "name" : "Baboon",
-            "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "description" : "Queen Zenobia puts a curse upon the future Caliph, Prince Kassim, turning him into a Baboon. Sinbad transports Prince Kassim to the land of Hyberboria to restore him."
-        },
-        {
-            "id" : "Minoton",
-            "still" : "http://www.harryhausen.com/images/stills/h_58.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_58.mp4",            
-            "name" : "Minoton",
-            "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "description" : "A golden mechanical Minotaur created by Queen Zenobia for muscle in her pursuit of Sinbad."
-        },
-        {
-            "id" : "Hornet",
-            "still" : "http://www.harryhausen.com/images/stills/h_59.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_59.mp4",            
-            "name" : "Hornet",
-            "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "description" : "After miniaturizing herself to spy on Sinbad, Queen Zenobia's restoring potion is consumed by a hornet while Melanthius interrogates her."
-        },
-        {
-            "id" : "Walrus",
-            "still" : "http://www.harryhausen.com/images/stills/h_60.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_60.mp4",            
-            "name" : "Walrus",
-            "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "description" : "Named <em>Walrus Giganticus</em> by Melanthius, this giant beast attacks Sinbad's crew as they trek across the ice to Hyberboria."
-        },
-        {
-            "id" : "Troglodyte",
-            "still" : "http://www.harryhausen.com/images/stills/h_61.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_61.mp4",            
-            "name" : "Troglodyte",
-            "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "description" : "Encountered by Sinbad's crew in Hyberboria. Melanthius identifies the Troglodyte as an ancestor of humans, and it accompanies Sinbad's crew to the shrine where Prince Kassim can be restored."
-        },
-        {
-            "id" : "GuardianOfTheShrine",
-            "still" : "http://www.harryhausen.com/images/stills/h_62.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_62.mp4",            
-            "name" : "Guardian of the Shrine",
-            "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "description" : "A Sabre-toothed cat, encased in ice and later possessed by Zenobia to kill Sinbad after losing her son in the Shrine. The Guardian does battle with &mdash; and defeats &mdash; the Troglodyte, but is later killed by Sinbad."
-        },
-        {
-            "id" : "Vulture",
-            "still" : "http://www.harryhausen.com/images/stills/h_63.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_63.mp4",            
-            "name" : "Vulture",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "Carries Princess Andromeda's spirit away to Calibos, where she is given a new riddle to ask potential suitors. (The penalty for guessing the wrong answer is death by burning at the stake.)"
-        },
-        {
-            "id" : "Pegasus",
-            "still" : "http://www.harryhausen.com/images/stills/h_64.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_64.mp4",            
-            "name" : "Pegasus",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "The last of the winged horses. Perseus captures Pegasus to follow the Giant Vulture that abducts Princess Andromeda. The airborne Pegasus animations were accomplished by Jim Danforth."
-        },
-        {
-            "id" : "Calibos",
-            "still" : "http://www.harryhausen.com/images/stills/h_65.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_65.mp4",            
-            "name" : "Calibos",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "Deformed by Zeus as punishment Calibos' unrequited love for Princess Andromeda drives him mad. In dialog scenes, Calibos is played by actor Neil McCarthy."
-        },
-        {
-            "id" : "Bubo",
-            "still" : "http://www.harryhausen.com/images/stills/h_66.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_66.mp4",            
-            "name" : "Bubo",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "A mechanical owl created by Haephestus as a replacement gift for Perseus after he loses his helmet of invisibility in Calibos' swamp. Most shots of Bubo were animated by Steve Archer."
-        },
-        {
-            "id" : "Dioskilos",
-            "still" : "http://www.harryhausen.com/images/stills/h_67.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_67.mp4",            
-            "name" : "Dioskilos",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "The two-headed dog which guards the entrance to Medusa's lair on the Isle of the Dead. Dioskilos animation was accomplished by Steve Archer and Jim Danforth."
-        },
-        {
-            "id" : "Medusa",
-            "still" : "http://www.harryhausen.com/images/stills/h_68.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_68.mp4",            
-            "name" : "Medusa",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "The mythical serpentine woman whose gaze turns men into stone. Perseus must obtain her head so that he can defeat the Kraken and save Princess Andromeda."
-        },
-        {
-            "id" : "Scorpions",
-            "still" : "http://www.harryhausen.com/images/stills/h_69.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_69.mp4",            
-            "name" : "Scorpions",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "Three giant scorpions are spawned from Medusa's dripping blood after Calibos punctures the bag containing her decapitated head."
-        },
-        {
-            "id" : "Kraken",
-            "still" : "http://www.harryhausen.com/images/stills/h_70.jpg",
-            "video" : "http://www.harryhausen.com/videos/h_70.mp4",            
-            "name" : "Kraken",
-            "anchorClass" : "ClashOfTheTitans",            
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "description" : "The last of the Titans. Goddess Theta demands that Princess Andromeda be sacrificed to the Kraken, claiming offense when Princess Andromeda's beauty is compared to her own."
-        }
+"creatureList": [
+    {
+        "id" : "MightyJoeYoung",
+        "still" : "http://www.harryhausen.com/images/stills/h_00.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_00.mp4",
+        "name" : "Mighty Joe Young",
+        "anchorClass" : "MightyJoeYoung_Movie",
+        "title" : "Mighty Joe Young",
+        "year" : "1949",
+        "description" : "Joe, the title character, is a tamed gorilla brought to Hollywood. Ray Harryhausen assisted his mentor Willis O'Brien (<em>King Kong</em>) on <em>Mighty Joe Young</em> and animated most of Mighty Joe Young's performance."
 
-    ],
-    "movieList" : [
-        {
-            "id" : "MightyJoeYoung_Movie",
-            "poster" : "http://www.harryhausen.com/images/posters/i_00.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 375,
-            "title" : "Mighty Joe Young",
-            "year" : "1949",
-            "anchorClass" : "MightyJoeYoung_Movie",            
-            "creatures" : ["Mighty Joe Young"]
-        },
+    },
+    {
+        "id" : "Rhedosaur",
+        "still" : "http://www.harryhausen.com/images/stills/h_01.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_01.mp4",            
+        "name" : "Rhedosaur",
+        "anchorClass" : "TheBeastFrom20000Fathoms",            
+        "title" : "The Beast from 20,000 Fathoms",
+        "year" : "1953",
+        "description" : "A fictitious species of dinosaur, awakened from a 100,000 year hibernation in the Arctic Circle by an atom bomb test."
+    },
+    {
+        "id" : "ItGiantOctopus",
+        "still" : "http://www.harryhausen.com/images/stills/h_02.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_02.mp4",            
+        "name" : "It (giant octopus)",
+        "anchorClass" : "ItCameFromBeneathTheSea",            
+        "title" : "It Came from Beneath the Sea",
+        "year" : "1955",
+        "description" : "A 200 foot long, radioactive, mutated Octopus that wreaks havoc on San Francisco."
+    },
+    {
+        "id" : "BrontosaurTheAnimalWorld",
+        "still" : "http://www.harryhausen.com/images/stills/h_03.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_03.mp4",            
+        "name" : "Brontosaur (The Animal World)",
+        "anchorClass" : "TheAnimalWorld",            
+        "title" : "The Animal World",
+        "year" : "1956",
+        "description" : "'Engineered by nature in a freakish manner so that she can hardly support her weight in land,' as described in <em>The Animal World</em>."
+    },
+    {
+        "id" : "AllosaurTheAnimalWorld",
+        "still" : "http://www.harryhausen.com/images/stills/h_04.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_04.mp4",            
+        "name" : "Allosaur (The Animal World)",
+        "anchorClass" : "TheAnimalWorld",            
+        "title" : "The Animal World",
+        "year" : "1956",
+        "description" : "'Mortal enemy of the Bronty,' as described in <em>The Animal World</em>."
+    },
+    {
+        "id" : "BrontosaurHatchling",
+        "still" : "http://www.harryhausen.com/images/stills/h_05.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_05.mp4",            
+        "name" : "Brontosaur Hatchling",
+        "anchorClass" : "TheAnimalWorld",            
+        "title" : "The Animal World",
+        "year" : "1956",
+        "description" : "'The prehistoric sun incubates one of the few remaining Bronty eggs.'"
+    },
+    {
+        "id" : "Stegosaur",
+        "still" : "http://www.harryhausen.com/images/stills/h_06.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_06.mp4",
+        "name" : "Stegosaur",
+        "anchorClass" : "TheAnimalWorld",            
+        "title" : "The Animal World",
+        "year" : "1956",
+        "description" : "'A dinosaur of gentle nature, even though 20 feet long and 10 tons weight.'"
+    },
+    {
+        "id" : "Sceraptosaur",
+        "still" : "http://www.harryhausen.com/images/stills/h_07.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_07.mp4",            
+        "name" : "Sceraptosaur",
+        "anchorClass" : "TheAnimalWorld",            
+        "title" : "The Animal World",
+        "year" : "1956",
+        "description" : "This sceraptosaur battles with both a stegosaur and another sceraptosaur."
+    },
+    {
+        "id" : "TriceratopsTheAnimalWorld",
+        "still" : "http://www.harryhausen.com/images/stills/h_08.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_08.mp4",            
+        "name" : "Triceratops (The Animal World)",
+        "anchorClass" : "TheAnimalWorld",            
+        "title" : "The Animal World",
+        "year" : "1956",
+        "description" : "'One of the species fated to disappear from the face of the Earth,' as narrated by <em>The Animal World</em>."
+    },
+    {
+        "id" : "Tyrannosaur",
+        "still" : "http://www.harryhausen.com/images/stills/h_09.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_09.mp4",            
+        "name" : "Tyrannosaur",
+        "anchorClass" : "TheAnimalWorld",            
+        "title" : "The Animal World",
+        "year" : "1956",
+        "description" : "'Deadly enemy of the Triceratops,' as narrated by <em>The Animal World</em>."
+    },
+    {
+        "id" : "FlyingSaucers",
+        "still" : "http://www.harryhausen.com/images/stills/h_10.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_10.mp4",            
+        "name" : "Flying Saucers",
+        "anchorClass" : "EarthVsTheFlyingSaucers",            
+        "title" : "Earth vs. the Flying Saucers",
+        "year" : "1956",
+        "description" : "Saucers soar, land, battle, and smash buildings into stop-motion animated rubble."
+    },
+    {
+        "id" : "Spaceship",
+        "still" : "http://www.harryhausen.com/images/stills/h_11.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_11.mp4",            
+        "name" : "Spaceship",
+        "anchorClass" : "TwentyMillionMilesToEarth",            
+        "title" : "Twenty Million Miles to Earth",
+        "year" : "1957",
+        "description" : "The crash-landing of the first Venus expedition on its return trip."
+    },
+    {
+        "id" : "Ymir",
+        "still" : "http://www.harryhausen.com/images/stills/h_13.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_13.mp4",            
+        "name" : "Ymir",
+        "anchorClass" : "TwentyMillionMilesToEarth",            
+        "title" : "Twenty Million Miles to Earth",
+        "year" : "1957",
+        "description" : "Never named in the film, the Ymir is a native of Venus. Returned to Earth as an egg, the Ymir rapidly grows to monstrous proportions in Earth's atmosphere and runs amok."
+    },
+    {
+        "id" : "ElephantTwentyMillionMilesToEarth",
+        "still" : "http://www.harryhausen.com/images/stills/h_12.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_12.mp4",            
+        "name" : "Elephant (Twenty Million Miles to Earth)",
+        "anchorClass" : "TwentyMillionMilesToEarth",            
+        "title" : "Twenty Million Miles to Earth",
+        "year" : "1957",
+        "description" : "The Ymir tangles with this elephant on the streets of Rome after escaping from captivity at the zoo."
+    },
+    {
+        "id" : "Cyclops",
+        "still" : "http://www.harryhausen.com/images/stills/h_14.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_14.mp4",            
+        "name" : "Cyclops",
+        "anchorClass" : "The7thVoyageOfSinbad",            
+        "title" : "The 7th Voyage of Sinbad",
+        "year" : "1958",
+        "description" : "Mr. Harryhausen imagined the mythical cyclops as a goat-legged, horned, wild creature. Two cyclopses appear in the film: The first is defeated by Sinbad, and the second is killed by the fire-breathing dragon that guards Zokora's cave."
+    },
+    {
+        "id" : "SerpentWoman",
+        "still" : "http://www.harryhausen.com/images/stills/h_15.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_15.mp4",            
+        "name" : "Serpent Woman",
+        "anchorClass" : "The7thVoyageOfSinbad",            
+        "title" : "The 7th Voyage of Sinbad",
+        "year" : "1958",
+        "description" : "Princess Parissa's waiting woman Sadi, transformed into a dancing serpent woman by Zokora's magic."
+    },
+    {
+        "id" : "RocHatchling",
+        "still" : "http://www.harryhausen.com/images/stills/h_16.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_16.mp4",            
+        "name" : "Roc Hatchling",
+        "anchorClass" : "The7thVoyageOfSinbad",            
+        "title" : "The 7th Voyage of Sinbad",
+        "year" : "1958",
+        "description" : "Princess Parissa's waiting woman Sadi, transformed into a dancing serpent woman by Zokora's magic."
+    },
+    {
+        "id" : "Roc",
+        "still" : "http://www.harryhausen.com/images/stills/h_17.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_17.mp4",            
+        "name" : "Roc",
+        "anchorClass" : "The7thVoyageOfSinbad",            
+        "title" : "The 7th Voyage of Sinbad",
+        "year" : "1958",
+        "description" : "Payback for the slaugter of her Roc hatchling."
+    },
+    {
+        "id" : "Skeleton",
+        "still" : "http://www.harryhausen.com/images/stills/h_18.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_18.mp4",            
+        "name" : "Skeleton",
+        "anchorClass" : "The7thVoyageOfSinbad",            
+        "title" : "The 7th Voyage of Sinbad",
+        "year" : "1958",
+        "description" : "Brought to life by Zokora's magic to steal a magic lamp, this skeleton swordsman fights Sinbad in Zokora's cave."
+    },
+    {
+        "id" : "Dragon",
+        "still" : "http://www.harryhausen.com/images/stills/h_19.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_19.mp4",            
+        "name" : "Dragon",
+        "anchorClass" : "The7thVoyageOfSinbad",            
+        "title" : "The 7th Voyage of Sinbad",
+        "year" : "1958",
+        "description" : "Guards the cavern entrance to Zokora's liar, slays a cyclops, and attacks Sinbad's crew before being slain by giant crossbow."
+    },
+    {
+        "id" : "Squirrel",
+        "still" : "http://www.harryhausen.com/images/stills/h_20.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_20.mp4",            
+        "name" : "Squirrel",
+        "anchorClass" : "The3WorldsOfGulliver",            
+        "title" : "The 3 Worlds of Gulliver",
+        "year" : "1960",
+        "description" : "Lost in Brodbdingnag, a land of giants, the newlywed Gullivers are menaced by a giant squirrel."
+    },
+    {
+        "id" : "Crocodile",
+        "still" : "http://www.harryhausen.com/images/stills/h_21.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_21.mp4",            
+        "name" : "Crocodile",
+        "anchorClass" : "The3WorldsOfGulliver",            
+        "title" : "The 3 Worlds of Gulliver",
+        "year" : "1960",
+        "description" : "The king of Brobdingnag forces Gulliver to battle his 'miniature' crocodile in a fight to the death."
+    },
+    {
+        "id" : "Crab",
+        "still" : "http://www.harryhausen.com/images/stills/h_22.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_22.mp4",            
+        "name" : "Crab",
+        "anchorClass" : "MysteriousIsland",            
+        "title" : "Mysterious Island",
+        "year" : "1961",
+        "description" : "Attacks the castaways on Mysterious Island. After the battle, the castaways cook the defeated crab in a convenient hot spring."
+    },
+    {
+        "id" : "Phororhacos",
+        "still" : "http://www.harryhausen.com/images/stills/h_23.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_23.mp4",            
+        "name" : "Phororhacos",
+        "anchorClass" : "MysteriousIsland",            
+        "title" : "Mysterious Island",
+        "year" : "1961",
+        "description" : "A giant, scrawny, prehistoric bird that threatens to trample the castaways of Mysterious Island."
+    },
+    {
+        "id" : "Cephalopod",
+        "still" : "http://www.harryhausen.com/images/stills/h_24.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_24.mp4",            
+        "name" : "Cephalopod",
+        "anchorClass" : "MysteriousIsland",            
+        "title" : "Mysterious Island",
+        "year" : "1961",
+        "description" : "The nautiloid cephalopod is a gigantic prehistoric mollusc. The cephalopod attacks Captian Nemo's diving crew as they attempt to raise a sunken pirate ship."
+    },
+    {
+        "id" : "Bee",
+        "still" : "http://www.harryhausen.com/images/stills/h_25.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_25.mp4",            
+        "name" : "Bee",
+        "anchorClass" : "MysteriousIsland",            
+        "title" : "Mysterious Island",
+        "year" : "1961",
+        "description" : "This bee drives two members of the Mysterious Island party into its giant honeycomb and seals them in with beeswax."
+    },
+    {
+        "id" : "Talos",
+        "still" : "http://www.harryhausen.com/images/stills/h_26.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_26.mp4",            
+        "name" : "Talos",
+        "anchorClass" : "JasonAndTheArgonauts",            
+        "title" : "Jason and the Argonauts",
+        "year" : "1963",
+        "description" : "Massive statue on the Isle of Bronze who guards over a treasure chamber of the gods. Talos comes to life when Hercules steals from its treasure."
+    },
+    {
+        "id" : "Harpies",
+        "still" : "http://www.harryhausen.com/images/stills/h_27.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_27.mp4",            
+        "name" : "Harpies",
+        "anchorClass" : "JasonAndTheArgonauts",            
+        "title" : "Jason and the Argonauts",
+        "year" : "1963",
+        "description" : "Two harpies are assigned by Zeus to torment the blind prophet Phinneas for abusing his power of prophecy. Phinneas agrees to help Jason in exchange for the harpies' capture."
+    },
+    {
+        "id" : "Hydra",
+        "still" : "http://www.harryhausen.com/images/stills/h_28.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_28.mp4",            
+        "name" : "Hydra",
+        "anchorClass" : "JasonAndTheArgonauts",            
+        "title" : "Jason and the Argonauts",
+        "year" : "1963",
+        "description" : "Jason slays the mythical Hydra to steal the Golden Fleece. The Hydra comes from a different myth (the twelve labors of Hercules), and appears in Jason and the Argonauts short two heads (the Greek myth had nine)."
+    },
+    {
+        "id" : "Skeletons",
+        "still" : "http://www.harryhausen.com/images/stills/h_29.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_29.mp4",            
+        "name" : "Skeletons",
+        "anchorClass" : "JasonAndTheArgonauts",            
+        "title" : "Jason and the Argonauts",
+        "year" : "1963",
+        "description" : "Seven 'Children of the Hydra's Teeth' fight with Jason and two of his crew. Four are defeated in swordfights, and three plunge to their deaths following Jason off a cliff into the sea."
+    },
+    {
+        "id" : "Moonship",
+        "still" : "http://www.harryhausen.com/images/stills/h_30.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_30.mp4",            
+        "name" : "Moonship",
+        "anchorClass" : "FirstMenInTheMoon",            
+        "title" : "First Men in the Moon",
+        "year" : "1964",
+        "description" : "A hypothetical United Nations moonship service module lands on the moon's surface."
+    },        
+    {
+        "id" : "SpaceSphere",
+        "still" : "http://www.harryhausen.com/images/stills/h_31.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_31.mp4",            
+        "name" : "Space Sphere",
+        "anchorClass" : "FirstMenInTheMoon",            
+        "title" : "First Men in the Moon",
+        "year" : "1964",
+        "description" : "A Victorian era spacecraft, patterned after a diving bell and covered with railroad bumpers, powered by Professor Cavor's anti-gravity paint."
+    },    
+    {
+        "id" : "MoonCow",
+        "still" : "http://www.harryhausen.com/images/stills/h_32.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_32.mp4",            
+        "name" : "Moon Cow",
+        "anchorClass" : "FirstMenInTheMoon",            
+        "title" : "First Men in the Moon",
+        "year" : "1964",
+        "description" : "Both a moon cow and moon bull appear (both are the same stop-motion puppet), each a gigantic centipede-like beast with fierce mandibles and bad tempters."
+    },    
+    {
+        "id" : "KateCalendarsSkeleton",
+        "still" : "http://www.harryhausen.com/images/stills/h_33.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_33.mp4",            
+        "name" : "Kate Calendar's Skeleton",
+        "anchorClass" : "FirstMenInTheMoon",            
+        "title" : "First Men in the Moon",
+        "year" : "1964",
+        "description" : "Kate Calendar is observed in an X-ray observation chamber by the Selenites."
+    },
+    {
+        "id" : "Selenite",
+        "still" : "http://www.harryhausen.com/images/stills/h_34.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_34.mp4",            
+        "name" : "Selenite",
+        "anchorClass" : "FirstMenInTheMoon",            
+        "title" : "First Men in the Moon",
+        "year" : "1964",
+        "description" : "Insect-like inhabitants of the interior of the moon (most appearances of the Selenites were costumed actors)."
+    },    
+    {
+        "id" : "GrandLunar",
+        "still" : "http://www.harryhausen.com/images/stills/h_35.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_35.mp4",            
+        "name" : "Grand Lunar",
+        "anchorClass" : "FirstMenInTheMoon",            
+        "title" : "First Men in the Moon",
+        "year" : "1964",
+        "description" : "The leader of the Selenites, encased in a crystal sphere. The Grand Lunar is sentient, and interrogates Professor Cavor."
+    },
+    {
+        "id" : "BrontosaurOneMillionYearsBC",
+        "still" : "http://www.harryhausen.com/images/stills/h_36.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_36.mp4",            
+        "name" : "Brontosaur (One Million Years B.C.)",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "This Brontosaur makes a brief appearance as Tumak wanders the wasteland after being expelled from his tribe."
+    },
+    {
+        "id" : "Archelon",
+        "still" : "http://www.harryhausen.com/images/stills/h_37.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_37.mp4",            
+        "name" : "Archelon",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "A giant prehistoric turtle menaces the Shell people, who drive it into the sea."
+    },
+    {
+        "id" : "AllosaurOneMillionYearsBC",
+        "still" : "http://www.harryhausen.com/images/stills/h_38.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_38.mp4",            
+        "name" : "Allosaur (One Million Years B.C.)",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "Attacks the peaceful fishing village of the Shell people, but is impaled and killed by Tumak in a ferocious battle."
+    },
+    {
+        "id" : "TriceratopsOneMillionYearsBC",
+        "still" : "http://www.harryhausen.com/images/stills/h_39.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_39.mp4",            
+        "name" : "Triceratops (One Million Years B.C.)",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "Gives chase to Tumak and Loana when they strike out on their own."
+    },
+    {
+        "id" : "Ceratosaur",
+        "still" : "http://www.harryhausen.com/images/stills/h_40.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_40.mp4",            
+        "name" : "Ceratosaur",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "Attacks a Triceratops during Tumak and Lona's journey. In the chaos, Tumak and Lona are separated."
+    },
+    {
+        "id" : "Pterodactyl",
+        "still" : "http://www.harryhausen.com/images/stills/h_41.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_41.mp4",            
+        "name" : "Pterodactyl",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "A Pterodactyl that suddenly drops from the sky and flies off with Lona in its talons."
+    },
+    {
+        "id" : "Rhamphorhynchus",
+        "still" : "http://www.harryhausen.com/images/stills/h_42.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_42.mp4",            
+        "name" : "Rhamphorhynchus",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "A flying reptile that attacks and kills the Pterodactyl to steal Lona."
+    },
+    {
+        "id" : "PterodactylHatchlings",
+        "still" : "http://www.harryhausen.com/images/stills/h_43.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_43.mp4",            
+        "name" : "Pterodactyl Hatchlings",
+        "anchorClass" : "OneMillionYearsBC",            
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "description" : "The mother Pterodactyl attempts to feed Lona to her ravenous offspring before being attacked by a Rhamphorhynchus."
+    },
+    {
+        "id" : "Horse",
+        "still" : "http://www.harryhausen.com/images/stills/h_44.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_44.mp4",            
+        "name" : "Horse",
+        "anchorClass" : "TheValleyOfGwangi",            
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "description" : "A brief animation of T.J. performing a stunt on her horse: Diving from a tower into a water tub."
+    },
+    {
+        "id" : "Eohippus",
+        "still" : "http://www.harryhausen.com/images/stills/h_45.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_45.mp4",            
+        "name" : "Eohippus",
+        "anchorClass" : "TheValleyOfGwangi",            
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "description" : "Named 'El Diablo' by its captors, Eohippus is a miniature prehistoric horse. Its escape leads to the discovery of Gwangi."
+    },
+    {
+        "id" : "Pteranodon",
+        "still" : "http://www.harryhausen.com/images/stills/h_46.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_46.mp4",            
+        "name" : "Pteranodon",
+        "anchorClass" : "TheValleyOfGwangi",            
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "description" : "Attacks Lope when he, Professor Bromley, and the cowboys first enter the forbidden valley."
+    },
+    {
+        "id" : "Ornithomimus",
+        "still" : "http://www.harryhausen.com/images/stills/h_47.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_47.mp4",            
+        "name" : "Ornithomimus",
+        "anchorClass" : "TheValleyOfGwangi",            
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "description" : "A small dinosaur chased by cowboys while searching for El Diablo in the Forbidden Valley before being captured & consumed by Gwangi."
+    },
+    {
+        "id" : "Gwangi",
+        "still" : "http://www.harryhausen.com/images/stills/h_48.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_48.mp4",            
+        "name" : "Gwangi",
+        "anchorClass" : "TheValleyOfGwangi",            
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "description" : "The title character of <em>Gwangi</em> is an Allosaur from the Forbidden Valley, an isolated spot where prehistoric life still flourishes. Gwangi is captured by a travelling Wild West show, but escapes and wreaks havoc."
+    },
+    {
+        "id" : "Styrathosaur",
+        "still" : "http://www.harryhausen.com/images/stills/h_49.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_49.mp4",            
+        "name" : "Styrathosaur",
+        "anchorClass" : "TheValleyOfGwangi",            
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "description" : "Attacks Gwangi while Professor Brombely watches, and later interferes during the lasso-ing of Gwangi."
+    },
+    {
+        "id" : "ElephantTheValleyOfGwangi",
+        "still" : "http://www.harryhausen.com/images/stills/h_50.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_50.mp4",            
+        "name" : "Elephant (The Valley of Gwangi)",
+        "anchorClass" : "TheValleyOfGwangi",            
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "description" : "This performing elephant panicks and is slain by Gwangi after escaping from its cage."
+    },
+    {
+        "id" : "Homonicus",
+        "still" : "http://www.harryhausen.com/images/stills/h_51.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_51.mp4",            
+        "name" : "Homonicus",
+        "anchorClass" : "TheGoldenVoyageOfSinbad",            
+        "title" : "The Golden Voyage of Sinbad",
+        "year" : "1974",
+        "description" : "A small humanoid, bat-winged creature who serves as an extension of Prince Koura's eyes and ears. The Homonicus is spontaneously generated from blood and sorcery."
+    },
+    {
+        "id" : "Figurehead",
+        "still" : "http://www.harryhausen.com/images/stills/h_52.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_52.mp4",            
+        "name" : "Figurehead",
+        "anchorClass" : "TheGoldenVoyageOfSinbad",            
+        "title" : "The Golden Voyage of Sinbad",
+        "year" : "1974",
+        "description" : "The figurehead of Sinbad's ship, brought to life by Prince Koura's magic to steal Sinbad's navigation charts."
+    },
+    {
+        "id" : "Kali",
+        "still" : "http://www.harryhausen.com/images/stills/h_53.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_53.mp4",            
+        "name" : "Kali",
+        "anchorClass" : "TheGoldenVoyageOfSinbad",            
+        "title" : "The Golden Voyage of Sinbad",
+        "year" : "1974",
+        "description" : "Six-armed statue of the god worshiped by the Lemurians. The statue comes to life with a potion from Prince Koura, and fights Sinbad's entire crew with a sword in each hand."
+    },
+    {
+        "id" : "Centaur",
+        "still" : "http://www.harryhausen.com/images/stills/h_54.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_54.mp4",            
+        "name" : "Centaur",
+        "anchorClass" : "TheGoldenVoyageOfSinbad",            
+        "title" : "The Golden Voyage of Sinbad",
+        "year" : "1974",
+        "description" : "'God of the Single Eye,' who resides in a pit leading to the Fountain of Destiny. The centaur represents the powers of evil, and is defeated by Sinbad with the aid of the Griffin in the film's climax."
+    },
+    {
+        "id" : "Griffin",
+        "still" : "http://www.harryhausen.com/images/stills/h_55.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_55.mp4",            
+        "name" : "Griffin",
+        "anchorClass" : "TheGoldenVoyageOfSinbad",            
+        "title" : "The Golden Voyage of Sinbad",
+        "year" : "1974",
+        "description" : "Representing the powers of good, the Griffin battles the Centaur to defend Sinbad."
+    },
+    {
+        "id" : "Ghouls",
+        "still" : "http://www.harryhausen.com/images/stills/h_56.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_56.mp4",            
+        "name" : "Ghouls",
+        "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "description" : "Three torch-wielding ghouls are summoned by Queen Zenobia to kill Sinbad and his crew. They are defeated by Sinbad's quick-thinking action when he crushes them under a pile of timbers."
+    },
+    {
+        "id" : "Baboon",
+        "still" : "http://www.harryhausen.com/images/stills/h_57.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_57.mp4",            
+        "name" : "Baboon",
+        "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "description" : "Queen Zenobia puts a curse upon the future Caliph, Prince Kassim, turning him into a Baboon. Sinbad transports Prince Kassim to the land of Hyberboria to restore him."
+    },
+    {
+        "id" : "Minoton",
+        "still" : "http://www.harryhausen.com/images/stills/h_58.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_58.mp4",            
+        "name" : "Minoton",
+        "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "description" : "A golden mechanical Minotaur created by Queen Zenobia for muscle in her pursuit of Sinbad."
+    },
+    {
+        "id" : "Hornet",
+        "still" : "http://www.harryhausen.com/images/stills/h_59.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_59.mp4",            
+        "name" : "Hornet",
+        "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "description" : "After miniaturizing herself to spy on Sinbad, Queen Zenobia's restoring potion is consumed by a hornet while Melanthius interrogates her."
+    },
+    {
+        "id" : "Walrus",
+        "still" : "http://www.harryhausen.com/images/stills/h_60.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_60.mp4",            
+        "name" : "Walrus",
+        "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "description" : "Named <em>Walrus Giganticus</em> by Melanthius, this giant beast attacks Sinbad's crew as they trek across the ice to Hyberboria."
+    },
+    {
+        "id" : "Troglodyte",
+        "still" : "http://www.harryhausen.com/images/stills/h_61.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_61.mp4",            
+        "name" : "Troglodyte",
+        "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "description" : "Encountered by Sinbad's crew in Hyberboria. Melanthius identifies the Troglodyte as an ancestor of humans, and it accompanies Sinbad's crew to the shrine where Prince Kassim can be restored."
+    },
+    {
+        "id" : "GuardianOfTheShrine",
+        "still" : "http://www.harryhausen.com/images/stills/h_62.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_62.mp4",            
+        "name" : "Guardian of the Shrine",
+        "anchorClass" : "SinbadAndTheEyeOfTheTiger",            
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "description" : "A Sabre-toothed cat, encased in ice and later possessed by Zenobia to kill Sinbad after losing her son in the Shrine. The Guardian does battle with &mdash; and defeats &mdash; the Troglodyte, but is later killed by Sinbad."
+    },
+    {
+        "id" : "Vulture",
+        "still" : "http://www.harryhausen.com/images/stills/h_63.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_63.mp4",            
+        "name" : "Vulture",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "Carries Princess Andromeda's spirit away to Calibos, where she is given a new riddle to ask potential suitors. (The penalty for guessing the wrong answer is death by burning at the stake.)"
+    },
+    {
+        "id" : "Pegasus",
+        "still" : "http://www.harryhausen.com/images/stills/h_64.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_64.mp4",            
+        "name" : "Pegasus",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "The last of the winged horses. Perseus captures Pegasus to follow the Giant Vulture that abducts Princess Andromeda. The airborne Pegasus animations were accomplished by Jim Danforth."
+    },
+    {
+        "id" : "Calibos",
+        "still" : "http://www.harryhausen.com/images/stills/h_65.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_65.mp4",            
+        "name" : "Calibos",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "Deformed by Zeus as punishment Calibos' unrequited love for Princess Andromeda drives him mad. In dialog scenes, Calibos is played by actor Neil McCarthy."
+    },
+    {
+        "id" : "Bubo",
+        "still" : "http://www.harryhausen.com/images/stills/h_66.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_66.mp4",            
+        "name" : "Bubo",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "A mechanical owl created by Haephestus as a replacement gift for Perseus after he loses his helmet of invisibility in Calibos' swamp. Most shots of Bubo were animated by Steve Archer."
+    },
+    {
+        "id" : "Dioskilos",
+        "still" : "http://www.harryhausen.com/images/stills/h_67.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_67.mp4",            
+        "name" : "Dioskilos",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "The two-headed dog which guards the entrance to Medusa's lair on the Isle of the Dead. Dioskilos animation was accomplished by Steve Archer and Jim Danforth."
+    },
+    {
+        "id" : "Medusa",
+        "still" : "http://www.harryhausen.com/images/stills/h_68.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_68.mp4",            
+        "name" : "Medusa",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "The mythical serpentine woman whose gaze turns men into stone. Perseus must obtain her head so that he can defeat the Kraken and save Princess Andromeda."
+    },
+    {
+        "id" : "Scorpions",
+        "still" : "http://www.harryhausen.com/images/stills/h_69.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_69.mp4",            
+        "name" : "Scorpions",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "Three giant scorpions are spawned from Medusa's dripping blood after Calibos punctures the bag containing her decapitated head."
+    },
+    {
+        "id" : "Kraken",
+        "still" : "http://www.harryhausen.com/images/stills/h_70.jpg",
+        "video" : "http://www.harryhausen.com/videos/h_70.mp4",            
+        "name" : "Kraken",
+        "anchorClass" : "ClashOfTheTitans",            
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "description" : "The last of the Titans. Goddess Theta demands that Princess Andromeda be sacrificed to the Kraken, claiming offense when Princess Andromeda's beauty is compared to her own."
+    }
 
-        {
-            "id" : "TheBeastFrom20000Fathoms",
-            "poster" : "http://www.harryhausen.com/images/posters/i_01.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 398,
-            "title" : "The Beast from 20,000 Fathoms",
-            "year" : "1953",
-            "anchorClass" : ["TheBeastFrom20000Fathoms"],            
-            "creatures" : ["Rhedosaur"]
-        },
-        {
-            "id" : "ItCameFromBeneathTheSea",
-            "poster" : "http://www.harryhausen.com/images/posters/i_02.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 397,
-            "title" : "It Came from Beneath the Sea",
-            "year" : "1955",
-            "anchorClass" : ["ItGiantOctopus"],            
-            "creatures" : ["It (giant octopus)"]
-        },
-        {
-            "id" : "TheAnimalWorld",
-            "poster" : "http://www.harryhausen.com/images/posters/i_03.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 384,
-            "title" : "The Animal World",
-            "year" : "1956",
-            "anchorClass" : ["BrontosaurTheAnimalWorld","AllosaurTheAnimalWorld","BrontosaurHatchling","Stegosaur","Sceraptosaur","TriceratopsTheAnimalWorld","Tyrannosaur"],            
-            "creatures" : ["Brontosaur","Allosaur","Brontosaur Hatchling","Stegosaur","Sceraptosaur","Triceratops","Tyrannosaur"]
-        },
-        {
-            "id" : "EarthVsTheFlyingSaucers",
-            "poster" : "http://www.harryhausen.com/images/posters/i_04.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 387,
-            "title" : "Earth vs. the Flying Saucers",
-            "year" : "1956",
-            "anchorClass" : ["FlyingSaucers"],            
-            "creatures" : ["Flying Saucers"]
-        },
-        {
-            "id" : "TwentyMillionMilesToEarth",
-            "poster" : "http://www.harryhausen.com/images/posters/i_05.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 383,
-            "title" : "Twenty Million Miles to Earth",
-            "year" : "1957",
-            "anchorClass" : ["Spaceship","Ymir","ElephantTwentyMillionMilesToEarth"],            
-            "creatures" : ["Spaceship","Ymir","Elephant"]
-        },
-        {
-            "id" : "The7thVoyageOfSinbad",
-            "poster" : "http://www.harryhausen.com/images/posters/i_06.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 393,
-            "title" : "The 7th Voyage of Sinbad",
-            "year" : "1958",
-            "anchorClass" : ["Cyclops","SerpentWoman","RocHatchling","Roc","Skeleton","Dragon"],            
-            "creatures" : ["Cyclops","Serpent Woman","Roc Hatchling","Roc","Skeleton","Dragon"]
-        },
-        {
-            "id" : "The3WorldsOfGulliver",
-            "poster" : "http://www.harryhausen.com/images/posters/i_07.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 385,
-            "title" : "The 3 Worlds of Gulliver",
-            "year" : "1960",
-            "anchorClass" : ["Squirrel","Crocodile"],            
-            "creatures" : ["Squirrel","Crocodile"]
-        },
-        {
-            "id" : "MysteriousIsland",
-            "poster" : "http://www.harryhausen.com/images/posters/i_08.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 374,
-            "title" : "Mysterious Island",
-            "year" : "1961",
-            "anchorClass" : ["Crab","Phororhacos","Cephalopod","Bee"],            
-            "creatures" : ["Crab","Phororhacos","Cephalopod","Bee"]
-        },
-        {
-            "id" : "JasonAndTheArgonauts",
-            "poster" : "http://www.harryhausen.com/images/posters/i_09.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 384,
-            "title" : "Jason and the Argonauts",
-            "year" : "1963",
-            "anchorClass" : ["Talos","Harpies","Hydra","Skeletons"],            
-            "creatures" : ["Talos","Harpies","Hydra","Skeletons"]
-        },
-        {
-            "id" : "FirstMenInTheMoon",
-            "poster" : "http://www.harryhausen.com/images/posters/i_10.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 403,
-            "title" : "First Men in the Moon",
-            "year" : "1964",
-            "anchorClass" : ["Moonship","SpaceSphere","MoonCow","KateCalendarsSkeleton","Selenite","GrandLunar"],
-            "creatures" : ["Moonship","Space Sphere","Moon Cow","Kate Calendar's Skeleton","Selenite","Grand Lunar"]
-        },
-        {
-            "id" : "OneMillionYearsBC",
-            "poster" : "http://www.harryhausen.com/images/posters/i_11.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 372,
-            "title" : "One Million Years B.C.",
-            "year" : "1966",
-            "anchorClass" : ["BrontosaurOneMillionYearsBC","Archelon","AllosaurOneMillionYearsBC","TriceratopsOneMillionYearsBC","Ceratosaur","Pterodactyl","Rhamphorhynchus","PterodactylHatchlings"],
-            "creatures" : ["Brontosaur","Archelon","Allosaur","Triceratops","Ceratosaur","Pterodactyl","Rhamphorhynchus","PterodactylH atchlings"]
-        },
-        {
-            "id" : "TheValleyOfGwangi",
-            "poster" : "http://www.harryhausen.com/images/posters/i_12.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 365,
-            "title" : "The Valley of Gwangi",
-            "year" : "1969",
-            "anchorClass" : ["Horse","Eohippus","Pteranodon","Ornithomimus","Gwangi","Styrathosaur","ElephantTheValleyOfGwangi"],
-            "creatures" : ["Horse","Eohippus","Pteranodon","Ornithomimus","Gwangi","Styrathosaur","Elephant"]
-        },
-        {
-            "id" : "TheGoldenVoyageOfSinbad",
-            "poster" : "http://www.harryhausen.com/images/posters/i_13.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 397,
-            "title" : "The Golden Voyage of Sinbad",
-            "year" : "1974",
-            "anchorClass" : ["Homonicus","Figurehead","Kali","Centaur","Griffin"],
-            "creatures" : ["Homonicus","Figurehead","Kali","Centaur","Griffin"]
-        },
-        {
-            "id" : "SinbadAndTheEyeOfTheTiger",
-            "poster" : "http://www.harryhausen.com/images/posters/i_14.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 392,
-            "title" : "Sinbad and the Eye of the Tiger",
-            "year" : "1977",
-            "anchorClass" : ["Ghouls","Baboon","Minoton","Hornet","Walrus","Troglodyte","GuardianOfTheShrine"],
-            "creatures" : ["Ghouls","Baboon","Minoton","Hornet","Walrus","Troglodyte","Guardian of the Shrine"]
-        },
-        {
-            "id" : "ClashOfTheTitans",
-            "poster" : "http://www.harryhausen.com/images/posters/i_15.jpg",
-            "posterWidth" : 250,
-            "posterHeight" : 383,
-            "title" : "Clash of the Titans",
-            "year" : "1981",
-            "anchorClass" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"],
-            "creatures" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"]
-        }
-    ]
+],
+"movieList" : [
+    {
+        "id" : "MightyJoeYoung_Movie",
+        "poster" : "http://www.harryhausen.com/images/posters/i_00.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 375,
+        "title" : "Mighty Joe Young",
+        "year" : "1949",
+        "anchorClass" : "MightyJoeYoung_Movie",            
+        "creatures" : ["Mighty Joe Young"]
+    },
 
-    };
+    {
+        "id" : "TheBeastFrom20000Fathoms",
+        "poster" : "http://www.harryhausen.com/images/posters/i_01.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 398,
+        "title" : "The Beast from 20,000 Fathoms",
+        "year" : "1953",
+        "anchorClass" : ["TheBeastFrom20000Fathoms"],            
+        "creatures" : ["Rhedosaur"]
+    },
+    {
+        "id" : "ItCameFromBeneathTheSea",
+        "poster" : "http://www.harryhausen.com/images/posters/i_02.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 397,
+        "title" : "It Came from Beneath the Sea",
+        "year" : "1955",
+        "anchorClass" : ["ItGiantOctopus"],            
+        "creatures" : ["It (giant octopus)"]
+    },
+    {
+        "id" : "TheAnimalWorld",
+        "poster" : "http://www.harryhausen.com/images/posters/i_03.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 384,
+        "title" : "The Animal World",
+        "year" : "1956",
+        "anchorClass" : ["BrontosaurTheAnimalWorld","AllosaurTheAnimalWorld","BrontosaurHatchling","Stegosaur","Sceraptosaur","TriceratopsTheAnimalWorld","Tyrannosaur"],            
+        "creatures" : ["Brontosaur","Allosaur","Brontosaur Hatchling","Stegosaur","Sceraptosaur","Triceratops","Tyrannosaur"]
+    },
+    {
+        "id" : "EarthVsTheFlyingSaucers",
+        "poster" : "http://www.harryhausen.com/images/posters/i_04.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 387,
+        "title" : "Earth vs. the Flying Saucers",
+        "year" : "1956",
+        "anchorClass" : ["FlyingSaucers"],            
+        "creatures" : ["Flying Saucers"]
+    },
+    {
+        "id" : "TwentyMillionMilesToEarth",
+        "poster" : "http://www.harryhausen.com/images/posters/i_05.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 383,
+        "title" : "Twenty Million Miles to Earth",
+        "year" : "1957",
+        "anchorClass" : ["Spaceship","Ymir","ElephantTwentyMillionMilesToEarth"],            
+        "creatures" : ["Spaceship","Ymir","Elephant"]
+    },
+    {
+        "id" : "The7thVoyageOfSinbad",
+        "poster" : "http://www.harryhausen.com/images/posters/i_06.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 393,
+        "title" : "The 7th Voyage of Sinbad",
+        "year" : "1958",
+        "anchorClass" : ["Cyclops","SerpentWoman","RocHatchling","Roc","Skeleton","Dragon"],            
+        "creatures" : ["Cyclops","Serpent Woman","Roc Hatchling","Roc","Skeleton","Dragon"]
+    },
+    {
+        "id" : "The3WorldsOfGulliver",
+        "poster" : "http://www.harryhausen.com/images/posters/i_07.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 385,
+        "title" : "The 3 Worlds of Gulliver",
+        "year" : "1960",
+        "anchorClass" : ["Squirrel","Crocodile"],            
+        "creatures" : ["Squirrel","Crocodile"]
+    },
+    {
+        "id" : "MysteriousIsland",
+        "poster" : "http://www.harryhausen.com/images/posters/i_08.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 374,
+        "title" : "Mysterious Island",
+        "year" : "1961",
+        "anchorClass" : ["Crab","Phororhacos","Cephalopod","Bee"],            
+        "creatures" : ["Crab","Phororhacos","Cephalopod","Bee"]
+    },
+    {
+        "id" : "JasonAndTheArgonauts",
+        "poster" : "http://www.harryhausen.com/images/posters/i_09.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 384,
+        "title" : "Jason and the Argonauts",
+        "year" : "1963",
+        "anchorClass" : ["Talos","Harpies","Hydra","Skeletons"],            
+        "creatures" : ["Talos","Harpies","Hydra","Skeletons"]
+    },
+    {
+        "id" : "FirstMenInTheMoon",
+        "poster" : "http://www.harryhausen.com/images/posters/i_10.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 403,
+        "title" : "First Men in the Moon",
+        "year" : "1964",
+        "anchorClass" : ["Moonship","SpaceSphere","MoonCow","KateCalendarsSkeleton","Selenite","GrandLunar"],
+        "creatures" : ["Moonship","Space Sphere","Moon Cow","Kate Calendar's Skeleton","Selenite","Grand Lunar"]
+    },
+    {
+        "id" : "OneMillionYearsBC",
+        "poster" : "http://www.harryhausen.com/images/posters/i_11.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 372,
+        "title" : "One Million Years B.C.",
+        "year" : "1966",
+        "anchorClass" : ["BrontosaurOneMillionYearsBC","Archelon","AllosaurOneMillionYearsBC","TriceratopsOneMillionYearsBC","Ceratosaur","Pterodactyl","Rhamphorhynchus","PterodactylHatchlings"],
+        "creatures" : ["Brontosaur","Archelon","Allosaur","Triceratops","Ceratosaur","Pterodactyl","Rhamphorhynchus","PterodactylH atchlings"]
+    },
+    {
+        "id" : "TheValleyOfGwangi",
+        "poster" : "http://www.harryhausen.com/images/posters/i_12.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 365,
+        "title" : "The Valley of Gwangi",
+        "year" : "1969",
+        "anchorClass" : ["Horse","Eohippus","Pteranodon","Ornithomimus","Gwangi","Styrathosaur","ElephantTheValleyOfGwangi"],
+        "creatures" : ["Horse","Eohippus","Pteranodon","Ornithomimus","Gwangi","Styrathosaur","Elephant"]
+    },
+    {
+        "id" : "TheGoldenVoyageOfSinbad",
+        "poster" : "http://www.harryhausen.com/images/posters/i_13.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 397,
+        "title" : "The Golden Voyage of Sinbad",
+        "year" : "1974",
+        "anchorClass" : ["Homonicus","Figurehead","Kali","Centaur","Griffin"],
+        "creatures" : ["Homonicus","Figurehead","Kali","Centaur","Griffin"]
+    },
+    {
+        "id" : "SinbadAndTheEyeOfTheTiger",
+        "poster" : "http://www.harryhausen.com/images/posters/i_14.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 392,
+        "title" : "Sinbad and the Eye of the Tiger",
+        "year" : "1977",
+        "anchorClass" : ["Ghouls","Baboon","Minoton","Hornet","Walrus","Troglodyte","GuardianOfTheShrine"],
+        "creatures" : ["Ghouls","Baboon","Minoton","Hornet","Walrus","Troglodyte","Guardian of the Shrine"]
+    },
+    {
+        "id" : "ClashOfTheTitans",
+        "poster" : "http://www.harryhausen.com/images/posters/i_15.jpg",
+        "posterWidth" : 250,
+        "posterHeight" : 383,
+        "title" : "Clash of the Titans",
+        "year" : "1981",
+        "anchorClass" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"],
+        "creatures" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"]
+    }
+],
+
+"portraitLink" : "http://www.rayharryhausen.com",
+"portraitTitle" : "Ray Harryhausen Official Site (opens in a new window)",
+"aboutContent" : aboutContent
+
+};
