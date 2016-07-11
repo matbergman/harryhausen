@@ -1,7 +1,4 @@
-[
-
-{
-
+    var harryhausenModel = {
 
     "creatureList": [
         {
@@ -879,8 +876,6 @@
             "anchorClass" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"],
             "creatures" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"]
         }
-
     ]
 
-}
-]
+    };
