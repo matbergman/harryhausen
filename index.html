@@ -4,14 +4,63 @@
 
 <head>
 
-	<title>The Ray Harryhausen Creature List </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google-site-verification" content="SsEwoFKUN2ZywZVR2hUdMywnf3o0o3zfAq_lLRA3a-s" />
+
+    <title>The Ray Harryhausen Creature List </title>
+
+    <meta name="description" content="A tribute to stop-motion animation master Ray Harryhausen, whose spellbinding science fiction and fantasy special effects continue to amaze.">
+
+<!--
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+-->
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
+<!--
+	<script src="js/jquery-1.12.4.min.js"></script>
+
+    <script src="js/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+-->
+    <!-- waypoints for sticky nav. https://github.com/imakewebthings/jquery-waypoints -->
+   
+<!--
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/waypoints-sticky.min.js"></script>
+-->
+
+    <!-- lazy load video tags to manage bandwidth. https://github.com/emn178/jquery-lazyload-any/tree/master/build -->
+
+<!--
+    <script type="text/javascript" src="js/jquery.lazyload-any.min.js"></script>
+-->
+
+    <!-- custom controls -->
+
+<!--
+    <script type="text/javascript" src="js/harryhausen.js"></script>    
+-->
 </head>
 
 <body v-cloak>
+
+<!--
+#####
+The Ray Harryhausen Creature List
+v6, 7/2016
+#####
+ -->
+
+<header>
+<h1>The Ray Harryhausen Creature List</h1>
+<h2>A tribute to the stop-motion magician</h2>
+</header>
 
 <nav id="listNavigation">
 <span class="instructions">Sort:</span>
@@ -28,15 +77,11 @@
 
 	<li v-for="creature in creatureList" id="{{ creature.id }}">
 
-<!--
 	<video loop="loop">
 		<source src="{{ creature.video }}">
 	</video>
 
 	<img class="still" src="{{ creature.still }}" alt="" title="" />
-
--->
-
 
 	<h2>{{ creature.name }}</h2>
 
@@ -79,14 +124,59 @@
 
 <div class="content">
 
-
 <a class="portrait" href="{{portraitLink}}" target="_blank" title="{{portraitTitle}}"></a>
-{{{aboutContent}}}
 
+{{{aboutContent}}}
 
 </div>
 
 </section>
+
+<!--
+<footer>
+
+    <div class="footer_content">
+
+        <div class="footer_row1">
+
+            <div class="footer_social">
+
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+
+
+                <div class="footerIcon facebook">
+                    <div class="fb-share-button" data-href="http://www.harryhausen.com" data-width="120" data-layout="button_count"></div>
+                </div>
+
+                <div class="footerIcon twitter">
+                <a href="https://twitter.com/share" class="footerIcon twitter-share-button" data-url="http://www.harryhausen.com" data-text="The Ray Harryhausen Creature List - a tribute to the stop motion magician." data-size="large">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+
+            </div>
+
+        <a class="footer_link" href="http://www.rayharryhausen.com" target="_blank">www.RayHarryhausen.com - the Official Ray Harryhausen Web Site</a>
+
+        </div>
+
+        <div class="footer_row2">
+            <div class="footer_disclaimer">
+            harryhausen.com is a fan tribute, and is not affiliated with Ray Harryhausen or the Ray and Diana Harryhausen Foundation. 
+            </div>
+        </div>      
+
+
+    </div>
+
+</footer>
+-->
 
 <script src="harryhausen_data.json"></script>
 
@@ -117,6 +207,18 @@ var navViewModel = new Vue ({
 })
 
 </script>
+
+<!--
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-947043-29");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+-->
 
 </body>
 

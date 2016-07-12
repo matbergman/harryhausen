@@ -1,0 +1,56 @@
+/* ##### The Ray Harryhausen Creature List ##### */
+/* ##### v5, 10/2014 ##### */
+
+$(document).ready(function(){
+
+window.scrollTo(0, 0);
+
+
+
+/* Floating nav */
+
+$("nav").waypoint("sticky");
+
+
+/* Lazy load videos */
+
+function load(theVideo){
+
+    theVideo.fadeOut(0, function() {
+        theVideo.fadeIn("fast");
+        });
+    }
+
+$('.lazyload').lazyload({load: load});
+
+
+/* Video hover states - desktop browsers */
+
+$("#creatureList li").mouseenter(function() {
+    this.getElementsByTagName("video")[0].play();
+});
+
+$("#creatureList li").mouseleave(function() {
+    this.getElementsByTagName("video")[0].pause();
+});
+
+
+
+
+/* Cross-screen anchor links */
+
+/*
+$(".movieList_anchor").on("click", function() {
+    anchorLinks(this);
+    $("video").show();
+    });
+
+
+$(".creatureList_anchor").on("click", function() {
+    $("video").hide();
+    anchorLinks(this);
+    });
+*/
+
+
+});
