@@ -1,5 +1,7 @@
 var harryhausenModel = {
 
+"layout" : "layoutCreature",
+
 "creatureList": [
     {
         "id" : "MightyJoeYoung",

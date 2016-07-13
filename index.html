@@ -21,13 +21,13 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 -->
 
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+	<script src="js/vue-1.0.26.js"></script>
 
-<!--
+
 	<script src="js/jquery-1.12.4.min.js"></script>
 
-    <script src="js/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
--->
+    <script src="js/jquery-ui.min.js"></script>
+
     <!-- waypoints for sticky nav. https://github.com/imakewebthings/jquery-waypoints -->
    
 <!--
@@ -68,20 +68,18 @@ v6, 7/2016
 <span class="divider"></span>
 <a href="#" id="byMovie" v-bind:class="{ 'current': layout == 'layoutMovie'}" v-on:click="layout='layoutMovie'"><span class="navBullet"></span>by movie</a>
 <a href="#" id="about" v-bind:class="{ 'current': layout == 'layoutAbout'}" v-on:click="layout='layoutAbout'"><span class="navBullet">about Ray Harryhausen</span></a>
-</nav>
+</nav>      
 
 
 <section id="creatureList" v-if="layout == 'layoutCreature'">
 
 <ul class="contentList">
 
-	<li v-for="creature in creatureList" id="{{ creature.id }}">
+	<li v-for="creature in creatureList" v-on:mouseover="videoPlay()" v-on:mouseleave="videoPause()" class="creature-item" id="{{ creature.id }}">
 
-	<video loop="loop">
-		<source src="{{ creature.video }}">
-	</video>
+	<video loop="loop" v-bind:src="creature.video" v-on:mouseover="testFunction()"></video>
 
-	<img class="still" src="{{ creature.still }}" alt="" title="" />
+	<img class="still" v-bind:src="creature.still" alt="" title="" />
 
 	<h2>{{ creature.name }}</h2>
 
@@ -182,29 +180,32 @@ v6, 7/2016
 
 <script>
 
-var creatureViewModel = new Vue({
-	el: '#creatureList .contentList',
-	data: harryhausenModel
-});
-
-
-var movieViewModel = new Vue({
-	el: '#movieList .contentList',
-	data: harryhausenModel
-});
-
-var aboutViewModel = new Vue({
-    el: '#about .content',
-    data: harryhausenModel
-});
-
-
-var navViewModel = new Vue ({
+new Vue ({
 	el: "body",
-	data: {
-		layout: 'layoutCreature',
-	}
-})
+	data: harryhausenModel,
+    methods: {
+        videoPlay: function() {
+            console.log("play");
+        },
+        videoPause: function() {
+            console.log("pause");
+        }        
+    }      
+
+});
+
+/*
+new Vue ({
+    el: "video",
+    data: {n:0},
+    methods: {
+        testFunction: function() {
+            console.log("test");
+        }
+    }    
+
+});
+*/
 
 </script>
 
