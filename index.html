@@ -14,19 +14,23 @@
 <!--
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="css/screen.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="images/favicon.ico">
 -->
 
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+
+
 	<script src="js/vue-1.0.26.js"></script>
 
-
+<!--
 	<script src="js/jquery-1.12.4.min.js"></script>
 
     <script src="js/jquery-ui.min.js"></script>
+
+-->
 
     <!-- waypoints for sticky nav. https://github.com/imakewebthings/jquery-waypoints -->
    
@@ -75,7 +79,7 @@ v6, 7/2016
 
 <ul class="contentList">
 
-	<li v-for="creature in creatureList" v-on:mouseover="videoPlay()" v-on:mouseleave="videoPause()" class="creature-item" id="{{ creature.id }}">
+	<li v-for="creature in creatureList" @mouseenter="videoPlay" @mouseleave="videoPause" class="creature-item" id="{{ creature.id }}">
 
 	<video loop="loop" v-bind:src="creature.video" v-on:mouseover="testFunction()"></video>
 
@@ -185,27 +189,16 @@ new Vue ({
 	data: harryhausenModel,
     methods: {
         videoPlay: function() {
-            console.log("play");
+            event.currentTarget.getElementsByTagName("video")[0].play();
         },
         videoPause: function() {
-            console.log("pause");
+            event.currentTarget.getElementsByTagName("video")[0].pause();
         }        
     }      
 
 });
 
-/*
-new Vue ({
-    el: "video",
-    data: {n:0},
-    methods: {
-        testFunction: function() {
-            console.log("test");
-        }
-    }    
 
-});
-*/
 
 </script>
 
