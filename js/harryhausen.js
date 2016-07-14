@@ -9,13 +9,14 @@ window.scrollTo(0, 0);
 
 /* Floating nav */
 
-//$("nav").waypoint("sticky");
+$("nav").waypoint("sticky");
 
 
 /* Lazy load videos */
 
 /*
 function load(theVideo){
+    console.log(theVideo);
 
     theVideo.fadeOut(0, function() {
         theVideo.fadeIn("fast");
@@ -24,20 +25,6 @@ function load(theVideo){
 
 $('.lazyload').lazyload({load: load});
 */
-
-/* Video hover states - desktop browsers */
-
-
-
-
-$("#creatureList li").mouseenter(function() {
-    this.getElementsByTagName("video")[0].play();
-});
-
-$("#creatureList li").mouseleave(function() {
-    this.getElementsByTagName("video")[0].pause();
-});
-
 
 
 

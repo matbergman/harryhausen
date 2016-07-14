@@ -11,45 +11,23 @@
 
     <meta name="description" content="A tribute to stop-motion animation master Ray Harryhausen, whose spellbinding science fiction and fantasy special effects continue to amaze.">
 
-<!--
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
-
-
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
-
     <link rel="shortcut icon" href="images/favicon.ico">
--->
-
     <link rel="stylesheet" type="text/css" href="css/screen.css" />
 
-
 	<script src="js/vue-1.0.26.js"></script>
-
-<!--
 	<script src="js/jquery-1.12.4.min.js"></script>
 
-    <script src="js/jquery-ui.min.js"></script>
-
--->
-
     <!-- waypoints for sticky nav. https://github.com/imakewebthings/jquery-waypoints -->
-   
-<!--
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/waypoints-sticky.min.js"></script>
--->
 
-    <!-- lazy load video tags to manage bandwidth. https://github.com/emn178/jquery-lazyload-any/tree/master/build -->
-
-<!--
-    <script type="text/javascript" src="js/jquery.lazyload-any.min.js"></script>
--->
+    <!-- lazy load video tags to manage bandwidth. http://www.pincer.io/node/libraries/lazysizes -->
+    <script src="js/lazysizes.min.js" async=""></script>
 
     <!-- custom controls -->
-
-<!--
     <script type="text/javascript" src="js/harryhausen.js"></script>    
--->
+
 </head>
 
 <body v-cloak>
@@ -81,9 +59,9 @@ v6, 7/2016
 
 	<li v-for="creature in creatureList" @mouseenter="videoPlay" @mouseleave="videoPause" class="creature-item" id="{{ creature.id }}">
 
-	<video loop="loop" v-bind:src="creature.video" v-on:mouseover="testFunction()"></video>
+	<video loop="loop" v-bind:src="creature.video" class="lazyload"></video>
 
-	<img class="still" v-bind:src="creature.still" alt="" title="" />
+	<img class="still lazyload" v-bind:src="creature.still" alt="" title="" />
 
 	<h2>{{ creature.name }}</h2>
 
@@ -107,7 +85,7 @@ v6, 7/2016
 
 	<li v-for="movie in movieList" id="{{movie.id}}">
 
-<!--	<img class="poster" src="{{movie.poster}}" width="{{movie.posterWidth}}" height="{{movie.posterHeight}}" alt="" title="" /> -->
+	<img class="poster lazyload" src="{{movie.poster}}" width="{{movie.posterWidth}}" height="{{movie.posterHeight}}" alt="" title="" /> 
 
 	<h2><em>{{movie.title}}</em> ({{movie.year}})</h2>
 		<ul class="movieList_cast">

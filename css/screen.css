@@ -10,7 +10,12 @@ body {
 	background:#f0f0f0;
 	color:#333;
 	font-size:17px;
+	display:block;
 	}
+
+body[v-cloak] {
+	display:none;
+}
 
 ul {
 	margin:0;
@@ -330,7 +335,14 @@ video {
 	}
 
 		
-					
+.lazyload {
+	opacity:0;
+}		
+				
+.lazyloaded {
+	opacity:1;
+}
+
 					
 /* ##### Content List - Movie List ##### */		
 
