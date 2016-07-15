@@ -182,22 +182,18 @@ new Vue ({
         anchorLink: function () {
 
             var target = event.currentTarget.className.split(' ')[1];
-
             this.layout = 'layoutMovie';
-
             $("li").removeClass("selected");
 
-            var targetID = document.getElementById(target);
-            $(targetID).addClass("selected");
+            this.$nextTick(function(){ // required for jQuery
 
-            console.log("target: "+target);
+                var targetID = document.getElementById(target);
+                $(targetID).addClass("selected");
 
-            var targetTop = ($(targetID).offset().top)-160;
-            window.scrollTo(0, targetTop);
+                var targetTop = ($(targetID).offset().top)-160; // scroll to the correct element
+                window.scrollTo(0, targetTop);
 
-
-            console.log("targetTop: "+targetTop);
-
+            });
 
 
         }
