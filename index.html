@@ -45,10 +45,17 @@ v6, 7/2016
 </header>
 
 <nav id="listNavigation">
+
 <span class="instructions">Sort:</span>
+
 <a href="#" id="byCreature" v-bind:class="{ 'current': layout == 'layoutCreature'}" v-on:click="layout='layoutCreature'"><span class="navBullet"></span>by creature</a>
+
 <span class="divider"></span>
+
 <a href="#" id="byMovie" v-bind:class="{ 'current': layout == 'layoutMovie'}" v-on:click="layout='layoutMovie'"><span class="navBullet"></span>by movie</a>
+
+<span class="divider"></span>
+
 <a href="#" id="about" v-bind:class="{ 'current': layout == 'layoutAbout'}" v-on:click="layout='layoutAbout'"><span class="navBullet">about Ray Harryhausen</span></a>
 </nav>      
 
@@ -65,7 +72,7 @@ v6, 7/2016
 
 	<h2>{{ creature.name }}</h2>
 
-	<h3><a class="creatureList_anchor {{ creature.anchorClass }}">{{ creature.title }}</a> ({{ creature.year }})</h3>
+	<h3><a class="creatureList_anchor {{ creature.anchorClass }}" v-on:click="anchorLink">{{ creature.title }}</a> ({{ creature.year }})</h3>
 
 	<p>
 	{{{creature.description}}}
@@ -85,7 +92,7 @@ v6, 7/2016
 
 	<li v-for="movie in movieList" id="{{movie.id}}">
 
-	<img class="poster lazyload" src="{{movie.poster}}" width="{{movie.posterWidth}}" height="{{movie.posterHeight}}" alt="" title="" /> 
+	<img class="poster lazyload" v-bind:src="movie.poster" width="{{movie.posterWidth}}" height="{{movie.posterHeight}}" alt="" title="" /> 
 
 	<h2><em>{{movie.title}}</em> ({{movie.year}})</h2>
 		<ul class="movieList_cast">
@@ -112,7 +119,7 @@ v6, 7/2016
 
 </section>
 
-<!--
+
 <footer>
 
     <div class="footer_content">
@@ -156,7 +163,7 @@ v6, 7/2016
     </div>
 
 </footer>
--->
+
 
 <script src="harryhausen_data.json"></script>
 
@@ -171,7 +178,13 @@ new Vue ({
         },
         videoPause: function() {
             event.currentTarget.getElementsByTagName("video")[0].pause();
-        }        
+        },
+        anchorLink: function () {
+            console.log("click: "+event.currentTarget.className.split(' ')[1]);
+            layout = 'layoutMovie';
+            console.log("layout: "+layout);
+        }
+
     }      
 
 });
