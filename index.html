@@ -72,7 +72,7 @@ v6, 7/2016
 
 	<h2>{{ creature.name }}</h2>
 
-	<h3><a class="creatureList_anchor {{ creature.anchorClass }}" v-on:click="anchorLink">{{ creature.title }}</a> ({{ creature.year }})</h3>
+	<h3><a class="creatureList_anchor {{ creature.anchorClass }}" v-on:click="anchorCreature">{{ creature.title }}</a> ({{ creature.year }})</h3>
 
 	<p>
 	{{{creature.description}}}
@@ -97,7 +97,7 @@ v6, 7/2016
 	<h2><em>{{movie.title}}</em> ({{movie.year}})</h2>
 		<ul class="movieList_cast">
 		<li v-for="movieCreature in movie.creatures">
-			<a class="movieList_anchor {{movie.anchorClass}}" v-on:click="anchorLink">{{movieCreature}}</a>
+			<a class="movieList_anchor {{movieCreature}}" v-on:click="anchorMovie">{{movieCreature}}</a>
 		</li>
 		</ul>
 	</li>
@@ -179,22 +179,22 @@ new Vue ({
         videoPause: function() {
             event.currentTarget.getElementsByTagName("video")[0].pause();
         },
-        anchorLink: function () {
+        anchorCreature: function() {
 
-            var target = event.currentTarget.className.split(' ')[1];
             this.layout = 'layoutMovie';
-            $("li").removeClass("selected");
 
             this.$nextTick(function(){ // required for jQuery
-
-                var targetID = document.getElementById(target);
-                $(targetID).addClass("selected");
-
-                var targetTop = ($(targetID).offset().top)-160; // scroll to the correct element
-                window.scrollTo(0, targetTop);
-
+                scrollSelection();
             });
 
+        },
+        anchorMovie: function() {
+
+            this.layout = 'layoutCreature';
+
+            this.$nextTick(function(){ // required for jQuery
+                scrollSelection();
+            });
 
         }
 
@@ -202,6 +202,24 @@ new Vue ({
 
 });
 
+
+function scrollSelection() {
+
+    var target = event.currentTarget.className.split(' ')[1];
+
+    console.log(target);
+
+
+    $("li").removeClass("selected");
+
+    var targetID = document.getElementById(target);
+    $(targetID).addClass("selected");
+
+    var targetTop = ($(targetID).offset().top)-160; // scroll to the correct element
+    window.scrollTo(0, targetTop);
+
+
+}
 
 
 </script>
