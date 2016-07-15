@@ -1,5 +1,5 @@
 /* ##### The Ray Harryhausen Creature List ##### */
-/* ##### v5, 10/2014 ##### */
+/* ##### v6, 7/2016 ##### */
 
 
 
@@ -35,12 +35,13 @@ a {
 
 h1 {
     display: block;
+    float:left;
     margin: 0;
     padding: 0;
-    width: 958px;
+    width:544px;
     height: 84px;
     text-indent: -9999px;
-    background: transparent url(../images/logo_wide.png) no-repeat 0 0;
+    background: transparent url(../images/logo.png) no-repeat 0 0;
     }
 
 h2 {
@@ -58,26 +59,32 @@ p {
 	font-weight:300;
 	}
 
-header {		
-	width:960px;
-	height:84px;
+header {
+	position:relative;
+	width:100%;		
+	max-width:960px;
+	overflow:auto;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:20px;
 	}
 	
 	header h2 {
-		display:none;
+		display:inline-block;
+		font-size:1.2em;
+		font-style:italic;
 		}
 
 section {
-	width:960px;
+	width:100%;
+	max-width:960px;
 	margin-left:auto;
 	margin-right:auto;
 	}
 
 nav {
-	width:950px;
+	width:calc(100% - 10px);
+	max-width:950px;
 	height:22px;
 	background:#ffffff;
 	border:1px solid #dfdfdf;
@@ -119,10 +126,6 @@ nav {
 		margin-right:5px;
 		vertical-align: top;
 		}
-
-section {
-	width:960px;
-	}	
 	
 footer {
 	width:100%;
@@ -142,7 +145,8 @@ footer {
 
 .footer_content {
 	position:relative;
-	width:960px;
+	width:100%;
+	max-width:960px;
 	margin-left:auto;
 	margin-right:auto;
 	font-weight:300;
@@ -204,16 +208,13 @@ strong {
 
 /* ##### Controls ##### */
 
-#dialog {
-	display:none; /* Prevents a brief glimpse when loading on mobile */
-	}
-
 /* Sticky nav */
 .sticky-wrapper {
-	width:960px;
+	width:100%;
+	max-width:960px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:40px;
+	margin-top:30px;
 	margin-bottom:40px;
 	}
 
@@ -234,7 +235,8 @@ strong {
 
 	.contentList > li {
 		position:relative;
-		width:920px;
+		width:auto;
+		max-width:920px;
 		min-height:160px;
 		padding:20px;
 		margin:0 0 40px 0;
@@ -372,8 +374,6 @@ img.poster {
 	border:3px solid #405765;
 	}
 
-/* ##### Dialog overrides (jQueryUI) ##### */
-
 .portrait {
 	display:block;
 	float:left;
@@ -382,45 +382,6 @@ img.poster {
 	margin:1em 1em .5em 0;
 	background-color:#000;
 	background-image:url(../images/portrait.jpg);
-	}
-
-.ui-dialog a {
-	text-decoration:underline;
-	font-weight:400;
-	}
-
-.ui-corner-all {
-	border-radius:0;
-	}
-
-.ui-widget-header {
-	background-color:#af211d;	
-	background-image:none;
-	border:0;
-	}
-
-.ui-widget-content {
-	background-color:#fff;
-	background-image:none;
-	border:1px solid #dfdfdf;
-	}
-
-.ui-widget-overlay {
-	background-image:none;
-	}
-
-.ui-widget {
-	font-family: 'Merriweather Sans', sans-serif;
-	font-size:1em;
-	font-weight:300;
-	}
-
-.ui-widget-header {
-	font-weight:300;
-	}
-
-.ui-widget-header .ui-icon {
-	background-image: url(../images/ui-icons_222222_256x240.png);
 	}
 
 
@@ -436,7 +397,7 @@ img.poster {
 
 
 	h1 {
-	    width: 900px;
+	    max-width: 900px;
 	    height:91px;
 	    background: transparent url(../images/logo_narrow.png);
 	    background-repeat:no-repeat;
@@ -507,10 +468,6 @@ img.poster {
 		clear:both;
 		}
 
-	.sticky-wrapper {
-		width:100%;
-		}
-
 	.lazyload {
 		display:none; /* hide video for mobile devices - HTML5 is buggy in those environments, and it's a lot of data to load over a metered connection */
 		}
@@ -524,7 +481,7 @@ img.poster {
 		}
 
 	.footer_content {
-		width:960px;
+		max-width:960px;
 		text-align:center;
 		}	
 
@@ -562,12 +519,58 @@ img.poster {
 }
 
 
+
+/* ##### Media Queries ##### */
+
+@media only screen and (min-width:320px) {
+
+	header h2 {
+		float:none;
+		clear:both;
+		margin:1em 0 0 115px;
+	}
+
+	
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px){
+
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px){
+
+
+
+}
+
+@media only screen and (min-width: 961px) {
+
+	header h2 {
+		float:right;
+		clear:none;
+		margin:1em 0 0 0;
+	}
+
+
+}
+
+
+
+
+
+
+
 /* for 10" android tablets */
 @media screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation:landscape)  {
 
 @viewport{
     zoom: 1.0;
-    width: 960px;
+    max-width: 960px;
 	}
 
 }
