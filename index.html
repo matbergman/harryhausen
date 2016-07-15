@@ -181,8 +181,7 @@ new Vue ({
         },
         anchorLink: function () {
             console.log("click: "+event.currentTarget.className.split(' ')[1]);
-            layout = 'layoutMovie';
-            console.log("layout: "+layout);
+            this.layout = 'layoutMovie';
         }
 
     }      
