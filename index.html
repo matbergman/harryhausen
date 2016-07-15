@@ -97,7 +97,7 @@ v6, 7/2016
 	<h2><em>{{movie.title}}</em> ({{movie.year}})</h2>
 		<ul class="movieList_cast">
 		<li v-for="movieCreature in movie.creatures">
-			<a class="movieList_anchor {{movie.anchorClass}}">{{movieCreature}}</a>
+			<a class="movieList_anchor {{movie.anchorClass}}" v-on:click="anchorLink">{{movieCreature}}</a>
 		</li>
 		</ul>
 	</li>
@@ -180,8 +180,26 @@ new Vue ({
             event.currentTarget.getElementsByTagName("video")[0].pause();
         },
         anchorLink: function () {
-            console.log("click: "+event.currentTarget.className.split(' ')[1]);
+
+            var target = event.currentTarget.className.split(' ')[1];
+
             this.layout = 'layoutMovie';
+
+            $("li").removeClass("selected");
+
+            var targetID = document.getElementById(target);
+            $(targetID).addClass("selected");
+
+            console.log("target: "+target);
+
+            var targetTop = ($(targetID).offset().top)-160;
+            window.scrollTo(0, targetTop);
+
+
+            console.log("targetTop: "+targetTop);
+
+
+
         }
 
     }      
