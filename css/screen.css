@@ -92,7 +92,16 @@ nav {
 	
 	nav a {
 		white-space:nowrap;
+		margin-right:1.2em;
+		display:inline;
+		float:none;
+		width:auto;
+		text-align:left;
 	}
+
+		nav a:last-child {
+			margin-right:0;
+		}
 
 	nav a:hover {
 		text-decoration:underline;
@@ -102,7 +111,7 @@ nav {
 		color:#af211d;
 		}
 
-		nav a.current span.navBullet::before {
+		nav a.current:before {
 			content:url(../images/bullet.png);
 			}
 
@@ -114,18 +123,8 @@ nav {
 		margin:0 2em 0 20px;
 		}
 			
-	nav span.divider {
-		padding:0 0 0 20px;
-		}
 
-	span.navBullet {
-		display:inline-block;
-		width:10px;
-		height:10px;
-		margin-right:5px;
-		vertical-align: top;
-		}
-	
+
 footer {
 	width:100%;
 	background:#333;
@@ -184,6 +183,7 @@ footer {
 	text-decoration:underline;
 	font-size:1.2em;
 	overflow:hidden;
+	margin:0 1em 0 11em;
 	}
 
 	.footer_link:hover {
@@ -303,10 +303,7 @@ strong {
 		cursor:pointer;
 		}
 
-	.contentList p {
-		margin:0 0 5px 225px;
-		padding:0;
-		}
+
 
 
 
@@ -384,138 +381,16 @@ img.poster {
 	}
 
 
+/* ##### Content pages (About) ##### */
 
-/* ##### Mobile styles ##### */
-
-
-@media screen and (-webkit-min-device-pixel-ratio: 1.3) {
-
-	body {
-		font-size:32px;
-		}
-
-
-	h1 {
-	    max-width: 900px;
-	    height:91px;
-	    background: transparent url(../images/logo_narrow.png);
-	    background-repeat:no-repeat;
-	    background-position:center center;
-	    background-size:contain;
-	    margin-left:auto;
-	    margin-right:auto;
-	    }
-
-	h2 {
-		font-size:1.8em;
-		font-weight:400;
-		}
-
-	p {
-		font-size:.8em;
-		line-height:1.8em;
-		}
-
-	nav {
-		font-size:36px; /* px value fixes sticky nav bug */
-		height:46px;
-
-		/* center for 10" landscape tablets */
-		margin-left:auto;
-		margin-right:auto;
-		}
-
-		nav span.instructions {
-			margin-right:3em;
-			}
-
-		nav span.divider {
-			display:none;
-			}
-
-	span.navBullet {
-		margin-top:-.25em;
-		}
-
-	#byMovie {
-		margin-left:4em;
-		}
-
-	#about {
-		display:none; /* no room for it in mobile */
-		}
-
-	.contentList > li {
-		-webkit-border-radius: 0;
-		border-radius: 0;
-		}
-
-	.contentList h2 {
-		display:block;
-		font-size:1.8em;
-		margin:0;
-		}
-		
-	.contentList h3 {
-		clear:both;
-		margin:.5em 0;
-		font-size:1.2em;
-		}
-		
-	.contentList p {
-		margin:0 0 5px 0;
-		clear:both;
-		}
-
-	.lazyload {
-		display:none; /* hide video for mobile devices - HTML5 is buggy in those environments, and it's a lot of data to load over a metered connection */
-		}
-
-	.still {
-		display:block;
-		float:left;
-		width:200px;
-		height:150px;
-		margin:0 1em .5em 0;
-		}
-
-	.footer_content {
-		max-width:960px;
-		text-align:center;
-		}	
-
-	.footer_social {
-		position:relative;
-		width:400px;
-		height:3em;
-		overflow:visible;
-		margin-left:auto;
-		margin-right:auto;
-		}
-
-	.twitter {
-		float:right;
-		width:120px;
-		}
-
-	.facebook {
-		margin-top:-1em;
-		float:left;
-		}
-	
-	.footer_row1 {
-		text-align:center;
-		}
-
-	.footer_link {
-		position:relative;
-		display:block;
-		overflow:visible;
-		float:none;
-		clear:both;
-		}
-
+.content {
+	padding:.5em 1.5em;
+	margin:0 0 2em 0;
+	background-color:#fff;
 }
+
+
+
 
 
 
@@ -544,6 +419,33 @@ img.poster {
 		display:none;
 	}
 
+	#byCreature:after {
+		content:"by creature";
+	}
+
+	#byMovie:after {
+		content:"by movie";
+	}
+
+	#byAbout:after {
+		content:"about";
+	}
+
+	.contentList h2 {
+		display:block;
+		word-break:break-all;
+		min-height:3.4em;
+		}
+		
+	.contentList h3 {
+		clear:both;
+		}
+		
+	.contentList p {
+		clear:both;
+		margin:0;
+		}	
+
 }
 
 @media only screen and (min-width:580px) {
@@ -561,6 +463,34 @@ img.poster {
 	.instructions {
 		display:inline-block;
 	}
+
+	#byCreature:after {
+		content:"by creature";
+	}
+
+	#byMovie:after {
+		content:"by movie";
+	}
+
+	#byAbout:after {
+		content:"about Ray Harryhausen";
+	}
+
+	.contentList h2 {
+		display:inline-block;
+		min-height:auto;
+		}
+		
+	.contentList h3 {
+		clear:none;
+		}
+		
+	.contentList p {
+		clear:none;
+		margin:0 0 5px 225px;
+
+		}
+
 
 }
 
@@ -608,11 +538,7 @@ img.poster {
 
 @media only screen and (min-width: 768px) and (max-width: 960px){
 
-
-
 }
-
-
 
 
 
@@ -633,7 +559,139 @@ img.poster {
 
 
 
+/* ##### Mobile styles ##### */
 
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) {
+
+	body {
+		font-size:32px;
+		}
+
+	nav {
+		font-size:60px;
+		line-height:85px;
+		height:85px;
+		}
+
+		nav span.instructions {
+			display:none;
+			}
+
+		nav a {
+			display:block;
+			float:left;
+			width:33%;
+			text-align:center;
+			margin:0;
+		}	
+
+		#byCreature:after {
+			content:"creature";
+		}
+
+		#byMovie:after {
+			content:"movie";
+		}
+
+		#byAbout:after {
+			content:"about";
+		}
+
+		nav a.current:before {
+			content:"";
+			}
+
+
+	.contentList > li {
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		margin-bottom:2em;
+		}
+
+	.contentList h2 {
+		display:block;
+		font-size:1.8em;
+		margin:0;
+		word-break:normal;
+		}
+		
+	.contentList h3 {
+		clear:both;
+		margin:.5em 0;
+		font-size:1.2em;
+		}
+		
+	.contentList p {
+		margin:0 0 5px 0;
+		clear:both;
+		}
+
+	.movieList_cast {
+		min-height:220px;
+	}
+
+	.movieList_cast li {
+		margin-bottom:.8em;
+	}
+
+		.movieList_cast li:last-child {
+			margin-bottom:0;
+		}
+
+	.lazyload {
+		display:none; /* hide video for mobile devices - HTML5 is buggy in those environments, and it's a lot of data to load over a metered connection */
+		}
+
+	.still {
+		display:block;
+		float:none;
+		width:100%;
+		height:auto;
+		margin:0 1em .5em 0;
+		}
+
+	.portrait {
+		display:none;
+	}
+
+	.footer_content {
+		text-align:center;
+		}	
+
+	.footer_social {
+		position:relative;
+		width:400px;
+		height:3em;
+		overflow:visible;
+		margin-left:auto;
+		margin-right:auto;
+		}
+
+	.twitter {
+		float:right;
+		width:120px;
+		}
+
+	.facebook {
+		margin-top:-1em;
+		float:left;
+		}
+	
+	.footer_row1 {
+		text-align:center;
+		}
+
+	.footer_link {
+		position:relative;
+		display:block;
+		overflow:visible;
+		float:none;
+		clear:both;
+		margin:0 1em;
+		}
+
+}
 
 
 

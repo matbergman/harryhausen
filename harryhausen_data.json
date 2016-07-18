@@ -724,8 +724,8 @@ var harryhausenModel = {
         "posterHeight" : 375,
         "title" : "Mighty Joe Young",
         "year" : "1949",
-        "anchorClass" : "MightyJoeYoung_Movie",            
-        "creatures" : ["Mighty Joe Young"]
+           
+        "creatures" : [["Mighty Joe Young","MightyJoeYoung_Movie"]]
     },
 
     {
@@ -735,8 +735,7 @@ var harryhausenModel = {
         "posterHeight" : 398,
         "title" : "The Beast from 20,000 Fathoms",
         "year" : "1953",
-        "anchorClass" : ["TheBeastFrom20000Fathoms"],            
-        "creatures" : ["Rhedosaur"]
+        "creatures" : [["Rhedosaur","TheBeastFrom20000Fathoms"]]
     },
     {
         "id" : "ItCameFromBeneathTheSea",
@@ -745,8 +744,7 @@ var harryhausenModel = {
         "posterHeight" : 397,
         "title" : "It Came from Beneath the Sea",
         "year" : "1955",
-        "anchorClass" : ["ItGiantOctopus"],            
-        "creatures" : ["It (giant octopus)"]
+        "creatures" : [["It (giant octopus)","ItGiantOctopus"]]
     },
     {
         "id" : "TheAnimalWorld",
@@ -755,8 +753,7 @@ var harryhausenModel = {
         "posterHeight" : 384,
         "title" : "The Animal World",
         "year" : "1956",
-        "anchorClass" : ["BrontosaurTheAnimalWorld","AllosaurTheAnimalWorld","BrontosaurHatchling","Stegosaur","Sceraptosaur","TriceratopsTheAnimalWorld","Tyrannosaur"],            
-        "creatures" : ["Brontosaur","Allosaur","Brontosaur Hatchling","Stegosaur","Sceraptosaur","Triceratops","Tyrannosaur"]
+        "creatures" : [["Brontosaur","BrontosaurTheAnimalWorld"],["Allosaur","AllosaurTheAnimalWorld"],["Brontosaur Hatchling","BrontosaurHatchling"],["Stegosaur","Stegosaur"],["Sceraptosaur","Sceraptosaur"],["Triceratops","TriceratopsTheAnimalWorld"],["Tyrannosaur","Tyrannosaur"]]
     },
     {
         "id" : "EarthVsTheFlyingSaucers",
@@ -765,8 +762,7 @@ var harryhausenModel = {
         "posterHeight" : 387,
         "title" : "Earth vs. the Flying Saucers",
         "year" : "1956",
-        "anchorClass" : ["FlyingSaucers"],            
-        "creatures" : ["Flying Saucers"]
+        "creatures" : [["Flying Saucers","FlyingSaucers"]]
     },
     {
         "id" : "TwentyMillionMilesToEarth",
@@ -775,8 +771,7 @@ var harryhausenModel = {
         "posterHeight" : 383,
         "title" : "Twenty Million Miles to Earth",
         "year" : "1957",
-        "anchorClass" : ["Spaceship","Ymir","ElephantTwentyMillionMilesToEarth"],            
-        "creatures" : ["Spaceship","Ymir","Elephant"]
+        "creatures" : [["Spaceship","Spaceship"],["Ymir","Ymir"],["Elephant","ElephantTwentyMillionMilesToEarth"]]
     },
     {
         "id" : "The7thVoyageOfSinbad",
@@ -785,8 +780,7 @@ var harryhausenModel = {
         "posterHeight" : 393,
         "title" : "The 7th Voyage of Sinbad",
         "year" : "1958",
-        "anchorClass" : ["Cyclops","SerpentWoman","RocHatchling","Roc","Skeleton","Dragon"],            
-        "creatures" : ["Cyclops","Serpent Woman","Roc Hatchling","Roc","Skeleton","Dragon"]
+        "creatures" : [["Cyclops","Cyclops"],["Serpent Woman","SerpentWoman"],["Roc Hatchling","RocHatchling"],["Roc","Roc"],["Skeleton","Skeleton"],["Dragon","Dragon"]]
     },
     {
         "id" : "The3WorldsOfGulliver",
@@ -795,8 +789,7 @@ var harryhausenModel = {
         "posterHeight" : 385,
         "title" : "The 3 Worlds of Gulliver",
         "year" : "1960",
-        "anchorClass" : ["Squirrel","Crocodile"],            
-        "creatures" : ["Squirrel","Crocodile"]
+        "creatures" : [["Squirrel","Squirrel"],["Crocodile","Crocodile"]]
     },
     {
         "id" : "MysteriousIsland",
@@ -805,8 +798,7 @@ var harryhausenModel = {
         "posterHeight" : 374,
         "title" : "Mysterious Island",
         "year" : "1961",
-        "anchorClass" : ["Crab","Phororhacos","Cephalopod","Bee"],            
-        "creatures" : ["Crab","Phororhacos","Cephalopod","Bee"]
+        "creatures" : [["Crab","Crab"],["Phororhacos","Phororhacos"],["Cephalopod","Cephalopod"],["Bee","Bee"]]
     },
     {
         "id" : "JasonAndTheArgonauts",
@@ -816,7 +808,7 @@ var harryhausenModel = {
         "title" : "Jason and the Argonauts",
         "year" : "1963",
         "anchorClass" : ["Talos","Harpies","Hydra","Skeletons"],            
-        "creatures" : ["Talos","Harpies","Hydra","Skeletons"]
+        "creatures" : [["Talos","Talos"],["Harpies","Harpies"],["Hydra","Hydra"],["Skeletons","Skeletons"]]
     },
     {
         "id" : "FirstMenInTheMoon",
@@ -825,8 +817,7 @@ var harryhausenModel = {
         "posterHeight" : 403,
         "title" : "First Men in the Moon",
         "year" : "1964",
-        "anchorClass" : ["Moonship","SpaceSphere","MoonCow","KateCalendarsSkeleton","Selenite","GrandLunar"],
-        "creatures" : ["Moonship","Space Sphere","Moon Cow","Kate Calendar's Skeleton","Selenite","Grand Lunar"]
+        "creatures" : [["Moonship","Moonship"],["Space Sphere","SpaceSphere"],["Moon Cow","MoonCow"],["Kate Calendar's Skeleton","KateCalendarsSkeleton"],["Selenite","Selenite"],["Grand Lunar","GrandLunar"]]
     },
     {
         "id" : "OneMillionYearsBC",
@@ -835,8 +826,7 @@ var harryhausenModel = {
         "posterHeight" : 372,
         "title" : "One Million Years B.C.",
         "year" : "1966",
-        "anchorClass" : ["BrontosaurOneMillionYearsBC","Archelon","AllosaurOneMillionYearsBC","TriceratopsOneMillionYearsBC","Ceratosaur","Pterodactyl","Rhamphorhynchus","PterodactylHatchlings"],
-        "creatures" : ["Brontosaur","Archelon","Allosaur","Triceratops","Ceratosaur","Pterodactyl","Rhamphorhynchus","PterodactylH atchlings"]
+        "creatures" : [["Brontosaur","BrontosaurOneMillionYearsBC"],["Archelon","Archelon"],["Allosaur","AllosaurOneMillionYearsBC"],["Triceratops","TriceratopsOneMillionYearsBC"],["Ceratosaur","Ceratosaur"],["Pterodactyl","Pterodactyl"],["Rhamphorhynchus","Rhamphorhynchus"],["Pterodactyl Hatchlings","PterodactylHatchlings"]]
     },
     {
         "id" : "TheValleyOfGwangi",
@@ -845,8 +835,7 @@ var harryhausenModel = {
         "posterHeight" : 365,
         "title" : "The Valley of Gwangi",
         "year" : "1969",
-        "anchorClass" : ["Horse","Eohippus","Pteranodon","Ornithomimus","Gwangi","Styrathosaur","ElephantTheValleyOfGwangi"],
-        "creatures" : ["Horse","Eohippus","Pteranodon","Ornithomimus","Gwangi","Styrathosaur","Elephant"]
+        "creatures" : [["Horse","Horse"],["Eohippus","Eohippus"],["Pteranodon","Pteranodon"],["Ornithomimus","Ornithomimus"],["Gwangi","Gwangi"],["Styrathosaur","Styrathosaur"],["Elephant","ElephantTheValleyOfGwangi"]]
     },
     {
         "id" : "TheGoldenVoyageOfSinbad",
@@ -855,8 +844,7 @@ var harryhausenModel = {
         "posterHeight" : 397,
         "title" : "The Golden Voyage of Sinbad",
         "year" : "1974",
-        "anchorClass" : ["Homonicus","Figurehead","Kali","Centaur","Griffin"],
-        "creatures" : ["Homonicus","Figurehead","Kali","Centaur","Griffin"]
+        "creatures" : [["Homonicus","Homonicus"],["Figurehead","Figurehead"],["Kali","Kali"],["Centaur","Centaur"],["Griffin","Griffin"]]
     },
     {
         "id" : "SinbadAndTheEyeOfTheTiger",
@@ -865,8 +853,7 @@ var harryhausenModel = {
         "posterHeight" : 392,
         "title" : "Sinbad and the Eye of the Tiger",
         "year" : "1977",
-        "anchorClass" : ["Ghouls","Baboon","Minoton","Hornet","Walrus","Troglodyte","GuardianOfTheShrine"],
-        "creatures" : ["Ghouls","Baboon","Minoton","Hornet","Walrus","Troglodyte","Guardian of the Shrine"]
+        "creatures" : [["Ghouls","Ghouls"],["Baboon","Baboon"],["Minoton","Minoton"],["Hornet","Hornet"],["Walrus","Walrus"],["Troglodyte","Troglodyte"],["Guardian of the Shrine","GuardianOfTheShrine"]]
     },
     {
         "id" : "ClashOfTheTitans",
@@ -875,8 +862,7 @@ var harryhausenModel = {
         "posterHeight" : 383,
         "title" : "Clash of the Titans",
         "year" : "1981",
-        "anchorClass" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"],
-        "creatures" : ["Vulture","Pegasus","Calibos","Bubo","Dioskilos","Medusa","Scorpions","Kraken"]
+        "creatures" : [["Vulture","Vulture"],["Pegasus","Pegasus"],["Calibos","Calibos"],["Bubo","Bubo"],["Dioskilos","Dioskilos"],["Medusa","Medusa"],["Scorpions","Scorpions"],["Kraken","Kraken"]]
     }
 ],
 

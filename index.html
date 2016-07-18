@@ -48,15 +48,12 @@ v6, 7/2016
 
 <span class="instructions">Sort:</span>
 
-<a href="#" id="byCreature" v-bind:class="{ 'current': layout == 'layoutCreature'}" v-on:click="layout='layoutCreature'"><span class="navBullet"></span>by creature</a>
+<a href="#" id="byCreature" v-bind:class="{ 'current': layout == 'layoutCreature'}" v-on:click="layout='layoutCreature'"></a>
 
-<span class="divider"></span>
 
-<a href="#" id="byMovie" v-bind:class="{ 'current': layout == 'layoutMovie'}" v-on:click="layout='layoutMovie'"><span class="navBullet"></span>by movie</a>
+<a href="#" id="byMovie" v-bind:class="{ 'current': layout == 'layoutMovie'}" v-on:click="layout='layoutMovie'"></a>
 
-<span class="divider"></span>
-
-<a href="#" id="about" v-bind:class="{ 'current': layout == 'layoutAbout'}" v-on:click="layout='layoutAbout'"><span class="navBullet">about Ray Harryhausen</span></a>
+<a href="#" id="byAbout" v-bind:class="{ 'current': layout == 'layoutAbout'}" v-on:click="layout='layoutAbout'"></a>
 </nav>      
 
 
@@ -97,7 +94,7 @@ v6, 7/2016
 	<h2><em>{{movie.title}}</em> ({{movie.year}})</h2>
 		<ul class="movieList_cast">
 		<li v-for="movieCreature in movie.creatures">
-			<a class="movieList_anchor {{movieCreature}}" v-on:click="anchorMovie">{{movieCreature}}</a>
+			<a class="movieList_anchor {{movieCreature[1]}}" v-on:click="anchorMovie">{{movieCreature[0]}}</a>
 		</li>
 		</ul>
 	</li>
@@ -207,9 +204,6 @@ function scrollSelection() {
 
     var target = event.currentTarget.className.split(' ')[1];
 
-    console.log(target);
-
-
     $("li").removeClass("selected");
 
     var targetID = document.getElementById(target);
@@ -218,9 +212,7 @@ function scrollSelection() {
     var targetTop = ($(targetID).offset().top)-160; // scroll to the correct element
     window.scrollTo(0, targetTop);
 
-
 }
-
 
 </script>
 
