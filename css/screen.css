@@ -155,7 +155,7 @@ footer {
 .footer_social {
 	position:absolute;
 	top:0;
-	left:0;
+	left:20px;
 	z-index:200;
 	}
 
@@ -193,7 +193,7 @@ footer {
 .footer_disclaimer {
 	text-align:center;
 	font-size:.85em;
-	margin-top:2em;
+	margin:2em 1em 0 1em;
 	}
 
 
@@ -430,7 +430,7 @@ img.poster {
 	.contentList h2 {
 		display:block;
 		word-break:break-all;
-		min-height:3.4em;
+		min-height:4em;
 	}
 		
 	.contentList h3 {
